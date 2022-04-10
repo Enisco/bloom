@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:bloom/components/profile_image_avatar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:icon_badge/icon_badge.dart';
-import 'package:bloom/components/dashboard_components/dashboard_silver_appbar.dart';
+import 'package:bloom/components/dashboard_components/dashboard_sliver_appbar.dart';
 import 'package:bloom/components/dashboard_components/dashboard_silverlist.dart';
 
 String sliverAppBarTitle = "You're in, Iremide";

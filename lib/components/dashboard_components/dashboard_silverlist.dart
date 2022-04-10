@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bloom/components/my_spacers.dart';
+import 'package:bloom/components/dashboard_components/silverlist_containers.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
+import 'package:animations/animations.dart';
 
 class MySliverList extends StatefulWidget {
   const MySliverList({Key? key}) : super(key: key);
@@ -35,30 +38,23 @@ class _MySliverListState extends State<MySliverList> {
                           'as well as the summary data across the six (6) '
                           'geopolitical zones in Nigeria.',
                           style: TextStyle(
-                            fontFamily: 'SourceSansPro',
+                            fontFamily: 'Poppins',
                             // fontFamily: 'Alata',
                             color: Colors.black.withOpacity(0.7),
                             fontSize: size.width / 23,
-                            fontWeight: FontWeight.w800,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                       ),
                       const Spacer1(),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(
-                            color: Colors.greenAccent,
-                            height: size.height / 2,
-                            width: size.width / 3,
-                          ),
-                          Container(
-                            color: Colors.red,
-                            height: size.height / 3.5,
-                            width: size.width / 3,
-                          )
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          EnergyConsumptionContainer(),
+                          MetersDetailsContainer(),
                         ],
                       ),
+                      const Spacer1(),
                       const Spacer1(),
                       Container(
                         color: Colors.blue,

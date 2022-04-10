@@ -77,9 +77,9 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
                 style: TextStyle(
                     fontSize: top < appbarThreshold
                         ? size.height / 30
-                        : size.height / 40,
+                        : size.height / 50,
                     color: Colors.black87,
-                    fontFamily: 'SourceSansSerif',
+                    fontFamily: 'Poppins',
                     fontWeight: FontWeight.w700),
               ),
             ),

@@ -22,7 +22,7 @@ dependencies:
   graphx: ^1.0.3
   animations: ^2.0.2
   dismissible_page: ^0.7.2
-  google_fonts: ^2.3.0
+  # google_fonts: ^2.1.1
   url_launcher: ^6.0.20
   sliver_header_delegate: ^0.0.5
   icon_badge: ^1.0.0
@@ -44,22 +44,18 @@ flutter:
 
   # example:
   fonts:
-    # - family: Oswald
-    #   fonts:
-    #     - asset: fonts/Oswald-Bold.ttf
-    #       weight: 900
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Medium.ttf
+        - asset: fonts/Poppins-Regular.ttf
+        - asset: fonts/Poppins-ExtraBold.ttf
+        - asset: fonts/Poppins-SemiBold.ttf
+        - asset: fonts/Poppins-Bold.ttf
+          weight: 900
 
     - family: BakbakOne
       fonts:
         - asset: fonts/BakbakOne-Regular.ttf
-    
-    # - family: FjallaOne
-    #   fonts:
-    #     - asset: fonts/FjallaOne-Regular.ttf
-
-    # - family: Lalezar
-    #   fonts:
-    #     - asset: fonts/Lalezar-Regular.ttf
 
     - family: Roboto
       fonts:

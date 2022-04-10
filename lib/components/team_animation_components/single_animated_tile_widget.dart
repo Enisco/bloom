@@ -59,6 +59,7 @@ class SingleAnimatedTileWidget extends StatelessWidget {
   final String imageName;
   final String nameText;
   final String roleText;
+  
 
   @override
   Widget build(BuildContext context) {
