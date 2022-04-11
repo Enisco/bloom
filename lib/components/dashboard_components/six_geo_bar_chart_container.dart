@@ -120,24 +120,24 @@ List<int> G = [164, 87, 32, 239, 209, 96];
 List<int> B = [204, 0, 63, 209, 3, 96];
 List<double> O = [1, 1, 1, 1, 1, 1];
 
-Widget EachGeoNotationWrapper(List<String> geoLocs) {
-  List<Widget> EachGeoNotationWidget = [];
-  for (int indxM = 1; indxM < geoLocs.length; indxM++) {
-    EachGeoNotationWidget.add(EachGeoNotation(
-      R: R[indxM],
-      G: G[indxM],
-      B: B[indxM],
-      O: O[indxM],
-      geoPoliticalZone: geoLocText[indxM],
-    ));
-  }
-  return Wrap(
-      alignment: WrapAlignment.spaceEvenly,
-      runAlignment: WrapAlignment.spaceBetween,
-      spacing: 1.0, // gap between adjacent chips
-      runSpacing: 1.0, // gap between lines
-      children: EachGeoNotationWidget);
-}
+// Widget EachGeoNotationWrapper(List<String> geoLocs) {
+//   List<Widget> EachGeoNotationWidget = [];
+//   for (int indxM = 1; indxM < geoLocs.length; indxM++) {
+//     EachGeoNotationWidget.add(EachGeoNotation(
+//       R: R[indxM],
+//       G: G[indxM],
+//       B: B[indxM],
+//       O: O[indxM],
+//       geoPoliticalZone: geoLocText[indxM],
+//     ));
+//   }
+//   return Wrap(
+//       alignment: WrapAlignment.spaceEvenly,
+//       runAlignment: WrapAlignment.spaceBetween,
+//       spacing: 1.0, // gap between adjacent chips
+//       runSpacing: 1.0, // gap between lines
+//       children: EachGeoNotationWidget);
+// }
 
 class EachGeoNotation extends StatelessWidget {
   const EachGeoNotation(

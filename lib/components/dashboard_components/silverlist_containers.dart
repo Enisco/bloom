@@ -7,6 +7,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
+bool meterState = false;
+
 class EnergyConsumptionContainer extends StatefulWidget {
   const EnergyConsumptionContainer({Key? key}) : super(key: key);
 
@@ -57,7 +59,8 @@ class _EnergyConsumptionContainerState
                 // backgroundColor: Colors.blue.withOpacity(0.2),
                 backgroundColor: const Color(0x1F18A0FB),
                 child: Icon(
-                  CupertinoIcons.sparkles,
+                  CupertinoIcons.bolt,
+                  color: const Color.fromRGBO(24, 160, 251, 1),
                   size: size.width / 12,
                 ),
               ),
@@ -152,7 +155,10 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
       child: InkWell(
         child: TextButton(
           onPressed: () {
-            goToPowerAnalysisPage();
+            setState(() {
+              meterState = !meterState;
+            });
+            // goToPowerAnalysisPage();
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -164,13 +170,14 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
                 // backgroundColor: Colors.blue.withOpacity(0.2),
                 backgroundColor: const Color(0x1F00A7A7),
                 child: Icon(
-                  CupertinoIcons.sparkles,
+                  CupertinoIcons.antenna_radiowaves_left_right,
+                  color: const Color.fromRGBO(0, 167, 167, 1),
                   size: size.width / 12,
                 ),
               ),
               const Spacer1(),
               Text(
-                "Active",
+                "Meter Connection",
                 style: TextStyle(
                   // color: const Color.fromRGBO(0, 167, 167, 1),
                   color: const Color.fromRGBO(0, 167, 167, 1),
@@ -181,7 +188,7 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
                 ),
               ),
               Text(
-                "Meter Connections",
+                "State",
                 style: TextStyle(
                   color: const Color.fromRGBO(0, 167, 167, 1),
                   fontFamily: 'Poppins',
@@ -189,31 +196,52 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              const Spacer1(),
-              RichText(
-                text: TextSpan(
-                  text: "200",
-                  style: TextStyle(
-                    // color: const Color.fromRGBO(31, 31, 31, 1),
-                    color: Colors.black87,
-                    fontFamily: 'Poppins',
-                    fontSize: size.width / 12,
-                    fontWeight: FontWeight.w600,
+              const Spacer2(),
+              Row(
+                children: [
+                  Icon(
+                    meterState
+                        ? CupertinoIcons.dot_radiowaves_right
+                        : CupertinoIcons.wifi_slash,
+                    color: meterState
+                        ? const Color.fromRGBO(173, 239, 209, 1)
+                        : Colors.redAccent.withOpacity(0.5),
                   ),
-                  children: <TextSpan>[
-                    TextSpan(
-                      text: " meters",
-                      style: TextStyle(
-                        color: Colors.black87,
-                        // color: const Color.fromRGBO(31, 31, 31, 1),
-                        fontFamily: 'Poppins',
-                        fontSize: size.width / 25,
-                        fontWeight: FontWeight.w400,
-                      ),
+                  Text(
+                    meterState ? " Active" : " Inactive",
+                    style: TextStyle(
+                      color: Colors.black87,
+                      fontFamily: 'Poppins',
+                      fontSize: size.width / 15,
+                      fontWeight: FontWeight.w600,
                     ),
-                  ],
-                ),
-              ),
+                  ),
+                ],
+              )
+              // RichText(
+              //   text: TextSpan(
+              //     text: "200",
+              //     style: TextStyle(
+              //       // color: const Color.fromRGBO(31, 31, 31, 1),
+              //       color: Colors.black87,
+              //       fontFamily: 'Poppins',
+              //       fontSize: size.width / 12,
+              //       fontWeight: FontWeight.w600,
+              //     ),
+              //     children: <TextSpan>[
+              //       TextSpan(
+              //         text: " meters",
+              //         style: TextStyle(
+              //           color: Colors.black87,
+              //           // color: const Color.fromRGBO(31, 31, 31, 1),
+              //           fontFamily: 'Poppins',
+              //           fontSize: size.width / 25,
+              //           fontWeight: FontWeight.w400,
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),

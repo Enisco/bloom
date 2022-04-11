@@ -75,8 +75,8 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
                     : extendedAppBarTitle,
                 style: TextStyle(
                     fontSize: top < appbarThreshold
-                        ? size.height / 30
-                        : size.height / 50,
+                        ? size.height / 35
+                        : size.height / 56,
                     color: Colors.black87,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w700),
@@ -84,7 +84,7 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
             ),
             titlePadding: top < appbarThreshold
                 ? EdgeInsets.fromLTRB(
-                    size.width / 4.9, 0.0, 0.0, size.height / 34)
+                    size.width / 4.9, 0.0, 0.0, size.height / 30)
                 : EdgeInsets.fromLTRB(size.width / 14, 0.0, 0.0, 0.0),
           );
         },

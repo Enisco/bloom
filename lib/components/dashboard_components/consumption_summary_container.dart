@@ -117,6 +117,7 @@ class _ConsumptionSummaryContainerState
                 color: Colors.white,
                 height: size.height / 9.5,
                 width: size.width / 2.40,
+                // child: ,
               )
             ],
           ),
