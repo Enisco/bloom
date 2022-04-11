@@ -40,7 +40,7 @@ class _BloomHomepageState extends State<BloomHomepage> {
           selectedItemColor: Colors.black54,
           selectedLabelStyle: TextStyle(
               fontSize: size.width / 25,
-              fontFamily: "SourceCodePro",
+                            fontFamily: 'Poppins',
               fontWeight: FontWeight.w800),
           showUnselectedLabels: true,
           showSelectedLabels: true,

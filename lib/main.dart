@@ -1,15 +1,5 @@
-// @dart=2.9
-import 'package:bloom/pages/mainpages/bloom_homepage.dart';
 import 'package:flutter/material.dart';
-import 'pages/splash_screen.dart';
-import 'pages/onboarding/signup_page2.dart';
-import 'pages/onboarding/signup_page1.dart';
-import 'pages/onboarding/signup_success_page.dart';
-import 'pages/onboarding/signin_page.dart';
-import 'pages/mainpages/faqs_page.dart';
-import 'pages/mainpages/about_us.dart';
-import 'package:bloom/pages/mainpages/team_page.dart';
-import 'package:bloom/pages/mainpages/dashboard.dart';
+import 'package:bloom/pages/mainpages/bloom_homepage.dart';
 
 void main() => runApp(const MyApp());
 

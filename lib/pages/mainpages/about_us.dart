@@ -50,7 +50,6 @@ class AboutUsPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // TopProgressLineCompleted(),
                 Image(
                   image: const AssetImage("images/yellow bulb.png"),
                   width: size.width / 8,
@@ -62,10 +61,10 @@ class AboutUsPage extends StatelessWidget {
                 Text(
                   "About us",
                   style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: 'Roboto',
+                    color: const Color.fromRGBO(31, 31, 31, 1),
+                    fontFamily: 'Poppins',
                     fontSize: size.height / 30,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
                 const Spacer1(),
@@ -79,10 +78,10 @@ class AboutUsPage extends StatelessWidget {
                   child: Text(
                     "Making energy data visualization accessible",
                     style: TextStyle(
-                      fontFamily: 'Alata',
-                      color: Colors.black87.withOpacity(0.6),
+                      fontFamily: 'Poppins',
+                      color: const Color.fromRGBO(31, 31, 31, 1),
                       fontSize: size.height / 38,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -103,10 +102,10 @@ class AboutUsPage extends StatelessWidget {
                         ' had been replaced. The question then is whether the "restored" ship'
                         ' is still the same object as the original.',
                         style: TextStyle(
-                          color: Colors.black.withOpacity(0.7),
-                          fontFamily: 'SourceSansPro',
-                          // fontFamily: 'Lato',
+                          color: const Color.fromRGBO(57, 57, 57, 1),
+                          fontFamily: 'Poppins',
                           fontSize: size.height / 40,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ],
@@ -118,10 +117,10 @@ class AboutUsPage extends StatelessWidget {
                 Text(
                   "The Team",
                   style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: 'Roboto',
+                    color: const Color.fromRGBO(31, 31, 31, 1),
+                    fontFamily: 'Poppins',
                     fontSize: size.height / 30,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
                 const Spacer2(),
@@ -139,10 +138,10 @@ class AboutUsPage extends StatelessWidget {
                 Text(
                   "Contact Us",
                   style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: 'Roboto',
+                    color: const Color.fromRGBO(31, 31, 31, 1),
+                    fontFamily: 'Poppins',
                     fontSize: size.height / 30,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
                 const Spacer2(),
@@ -152,17 +151,19 @@ class AboutUsPage extends StatelessWidget {
                   text: TextSpan(
                     text: 'Website: ',
                     style: TextStyle(
-                      color: Colors.black.withOpacity(0.6),
+                      fontFamily: 'Poppins',
+                      color: const Color.fromRGBO(31, 31, 31, 1),
                       fontSize: size.height / 45,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w500,
                     ),
                     children: <TextSpan>[
                       TextSpan(
                         text: ourWebsiteUrl,
                         style: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Colors.blue.withOpacity(0.6),
                           fontSize: size.height / 45,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w500,
                         ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
@@ -179,17 +180,19 @@ class AboutUsPage extends StatelessWidget {
                   text: TextSpan(
                     text: 'Whatsapp: ',
                     style: TextStyle(
-                      color: Colors.black.withOpacity(0.6),
+                      fontFamily: 'Poppins',
+                      color: const Color.fromRGBO(31, 31, 31, 1),
                       fontSize: size.height / 45,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w500,
                     ),
                     children: <TextSpan>[
                       TextSpan(
                         text: "+2348101564160",
                         style: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Colors.blue.withOpacity(0.6),
                           fontSize: size.height / 45,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w500,
                         ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
@@ -201,7 +204,6 @@ class AboutUsPage extends StatelessWidget {
                 ),
                 const Spacer3(),
                 //---------------------------------------------------------------------------------------------------------
-                // const Spacer3(),
               ],
             ),
           ),

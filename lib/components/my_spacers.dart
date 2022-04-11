@@ -1,5 +1,31 @@
 import 'package:flutter/material.dart';
 
+class SpacerUltraSmall extends StatelessWidget {
+  const SpacerUltraSmall({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
+    return SizedBox(
+      height: size.height / 50000,
+    );
+  }
+}
+
+class SpacerSmall extends StatelessWidget {
+  const SpacerSmall({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
+    return SizedBox(
+      height: size.height / 200,
+    );
+  }
+}
+
 class Spacer0 extends StatelessWidget {
   const Spacer0({Key? key}) : super(key: key);
 

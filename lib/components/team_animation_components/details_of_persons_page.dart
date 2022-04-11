@@ -66,14 +66,7 @@ class DetailsOfPersonsPage extends StatelessWidget {
                 ),
               ),
             ),
-            // CircleAvatar(
-            //   radius: size.width / 3,
-            //   backgroundColor: Colors.transparent,
-            //   child: Image.asset(
-            //     imageName,
-            //   ),
-            //   // foregroundImage: AssetImage(imageName),
-            // ),
+            
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(

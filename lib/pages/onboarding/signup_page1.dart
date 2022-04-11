@@ -19,37 +19,33 @@ class SignUpPageOne extends StatefulWidget {
 }
 
 class _SignUpPageOneState extends State<SignUpPageOne> {
-
   void goToSignUpTwo() {
-    
     Navigator.push(
       context,
       PageTransition(
           type: PageTransitionType.rightToLeft,
           curve: Curves.easeInToLinear,
           duration: const Duration(milliseconds: 1000),
-          reverseDuration:  const Duration(milliseconds: 1000),
+          reverseDuration: const Duration(milliseconds: 1000),
           child: const SIgnUpTwo(),
           inheritTheme: true,
           ctx: context),
     );
   }
 
-void goToSignInPage() {
-
+  void goToSignInPage() {
     Navigator.push(
       context,
       PageTransition(
           type: PageTransitionType.rightToLeftWithFade,
           curve: Curves.easeInToLinear,
           duration: const Duration(milliseconds: 1000),
-          reverseDuration:  const Duration(milliseconds: 1000),
+          reverseDuration: const Duration(milliseconds: 1000),
           child: const SignInPage(),
           inheritTheme: true,
           ctx: context),
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +72,7 @@ void goToSignInPage() {
                 "Sign Up",
                 style: TextStyle(
                   color: Colors.black,
-                  fontFamily: 'Roboto',
+                  fontFamily: 'Poppins',
                   fontSize: size.height / 30,
                   fontWeight: FontWeight.bold,
                 ),
@@ -92,7 +88,7 @@ void goToSignInPage() {
                   child: Text(
                     "Enter your phone number to start your signing up process",
                     style: TextStyle(
-                      fontFamily: 'BakbakOne',
+                      fontFamily: 'Poppins',
                       fontSize: size.height / 43,
                       color: Colors.black38,
                     ),
@@ -109,7 +105,6 @@ void goToSignInPage() {
                 ),
                 width: size.width,
                 height: size.height / 18,
-                
                 child: IntlPhoneField(
                   initialCountryCode: 'NG',
                   flagsButtonMargin: const EdgeInsets.fromLTRB(
@@ -132,10 +127,12 @@ void goToSignInPage() {
                     ),
                     labelText: '903 224 2379',
                     labelStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     hintText: "Your Phone Number",
                     hintStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                   ),

@@ -21,7 +21,6 @@ class Faq extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           border: Border(
-
             bottom: BorderSide(width: 2.0, color: Colors.grey.shade200),
           ),
         ),
@@ -45,10 +44,10 @@ class Faq extends StatelessWidget {
                   child: Text(
                     questionString,
                     style: TextStyle(
-                      fontFamily: 'SourceSansPro',
+                      fontFamily: 'Poppins',
                       fontSize: size.height / 45,
                       fontWeight: FontWeight.w600,
-                      color: Colors.black54,
+                      color: const Color.fromRGBO(57, 57, 57, 1),
                     ),
                   )),
               collapsed: const Padding(
@@ -60,10 +59,10 @@ class Faq extends StatelessWidget {
               expanded: Text(
                 answerString,
                 style: TextStyle(
-                  fontFamily: 'SourceSerifPro',
+                  fontFamily: 'Poppins',
                   fontSize: size.height / 45,
-                  fontWeight: FontWeight.w300,
-                  color: Colors.black54,
+                  fontWeight: FontWeight.w400,
+                  color: const Color.fromRGBO(89, 89, 89, 1),
                 ),
                 softWrap: true,
                 overflow: TextOverflow.fade,
@@ -115,7 +114,7 @@ final List<FAQuestionsAndAnswers> qnA = [
       questionAnswer:
           "No piece of square dry paper can be folded in half more than 7 times. The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant."),
   FAQuestionsAndAnswers(
-      questionText: "Where is Bloom Headquareters?",
+      questionText: "Where is Bloom Headquarters?",
       questionAnswer:
           "The total surface area of two human lungs is approximately 70 square metres. Google was originally called 'Backrub'. In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat."),
 ];

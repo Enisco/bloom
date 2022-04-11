@@ -28,7 +28,7 @@ class _SignInPageState extends State<SignInPage> {
           type: PageTransitionType.rightToLeft,
           curve: Curves.fastLinearToSlowEaseIn,
           duration: const Duration(milliseconds: 1000),
-          reverseDuration:  const Duration(milliseconds: 1000),
+          reverseDuration: const Duration(milliseconds: 1000),
           child: const SignUpPageOne(),
           inheritTheme: true,
           ctx: context),
@@ -57,8 +57,8 @@ class _SignInPageState extends State<SignInPage> {
               Text(
                 "Sign In",
                 style: TextStyle(
+                  fontFamily: 'Poppins',
                   color: Colors.black,
-                  fontFamily: 'Roboto',
                   fontSize: size.height / 30,
                   fontWeight: FontWeight.bold,
                 ),
@@ -74,7 +74,7 @@ class _SignInPageState extends State<SignInPage> {
                 child: Text(
                   "Welcome Back! Enter your details to continue",
                   style: TextStyle(
-                    fontFamily: 'SourceSerifPro',
+                    fontFamily: 'Poppins',
                     fontSize: size.height / 43,
                     color: Colors.black38,
                   ),
@@ -95,7 +95,9 @@ class _SignInPageState extends State<SignInPage> {
                 child: TextField(
                   controller: usernameController,
                   style: const TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w500),
+                      fontFamily: 'Poppins',
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500),
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(10.0),
                     border: InputBorder.none,
@@ -104,17 +106,19 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                     labelText: 'Username',
                     labelStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     hintText: "Enter username or  email",
                     hintStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                   ),
                 ),
               ),
               //---------------------------------------------------------------------------------------------------------
-              
+
               const Spacer2(),
 
               //---------------------------------------------------------------------------------------------------------
@@ -130,7 +134,9 @@ class _SignInPageState extends State<SignInPage> {
                   obscureText: _isObscure,
                   controller: passwordController,
                   style: const TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w500),
+                      fontFamily: 'Poppins',
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500),
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     focusedBorder: const OutlineInputBorder(
@@ -138,10 +144,12 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                     labelText: 'Password',
                     labelStyle: const TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     hintText: "Enter your password",
                     hintStyle: const TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     contentPadding: const EdgeInsets.all(10.0),

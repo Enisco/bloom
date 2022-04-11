@@ -19,7 +19,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
       children: <Widget>[
         Text(
           login ? "Are you new here? " : "Already have an Account? ",
-          style: const TextStyle(color: Colors.black),
+          style: const TextStyle(fontFamily: 'Poppins', color: Colors.black),
         ),
         GestureDetector(
           onTap: () {
@@ -28,6 +28,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
           child: Text(
             login ? "Sign Up" : "Sign In",
             style: TextStyle(
+              fontFamily: 'Poppins',
               color: Colors.amber,
               fontSize: size.height / 43,
               fontWeight: FontWeight.bold,

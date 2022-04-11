@@ -42,7 +42,6 @@ flutter:
     - images/
 
 
-  # example:
   fonts:
     - family: Poppins
       fonts:

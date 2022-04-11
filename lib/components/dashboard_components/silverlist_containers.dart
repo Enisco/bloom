@@ -2,6 +2,7 @@
 
 import 'package:bloom/components/my_spacers.dart';
 import 'package:bloom/pages/onboarding/signup_page2.dart';
+import 'package:bloom/pages/onboarding/signup_page1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -35,12 +36,11 @@ class _EnergyConsumptionContainerState
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      // padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
       decoration: BoxDecoration(
         color: const Color(0x1418A0FB),
         borderRadius: BorderRadius.all(Radius.circular(size.width / 40)),
       ),
-      width: size.width / 2.5,
+      width: size.width / 2.42,
       height: size.height / 4,
       child: InkWell(
         child: TextButton(
@@ -131,7 +131,7 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
           curve: Curves.easeInOutCirc,
           duration: const Duration(milliseconds: 600),
           reverseDuration: const Duration(milliseconds: 600),
-          child: const SIgnUpTwo(),
+          child: const SignUpPageOne(),
           inheritTheme: true,
           ctx: context),
     );
@@ -147,7 +147,7 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
         color: const Color(0x1400A7A7),
         borderRadius: BorderRadius.all(Radius.circular(size.width / 40)),
       ),
-      width: size.width / 2.5,
+      width: size.width / 2.42,
       height: size.height / 4,
       child: InkWell(
         child: TextButton(
@@ -172,7 +172,9 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
               Text(
                 "Active",
                 style: TextStyle(
+                  // color: const Color.fromRGBO(0, 167, 167, 1),
                   color: const Color.fromRGBO(0, 167, 167, 1),
+
                   fontFamily: 'Poppins',
                   fontSize: size.width / 23,
                   fontWeight: FontWeight.w500,

@@ -79,7 +79,7 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                 "Sign Up",
                 style: TextStyle(
                   color: Colors.black,
-                  fontFamily: 'Roboto',
+                  fontFamily: 'Poppins',
                   fontSize: size.height / 30,
                   fontWeight: FontWeight.bold,
                 ),
@@ -95,7 +95,7 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                 child: Text(
                   "We require your full details to create your account",
                   style: TextStyle(
-                    fontFamily: 'BakbakOne',
+                    fontFamily: 'Poppins',
                     fontSize: size.height / 43,
                     color: Colors.black38,
                   ),
@@ -116,7 +116,9 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                 child: TextField(
                   controller: fullameController,
                   style: const TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w500),
+                      fontFamily: 'Poppins',
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500),
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(10.0),
                     border: InputBorder.none,
@@ -125,10 +127,12 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                     ),
                     labelText: 'Full Name',
                     labelStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     hintText: "Enter your full name",
                     hintStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                   ),
@@ -149,7 +153,9 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                 child: TextField(
                   controller: usernameController,
                   style: const TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w500),
+                      fontFamily: 'Poppins',
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500),
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(10.0),
                     border: InputBorder.none,
@@ -158,10 +164,12 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                     ),
                     labelText: 'Username',
                     labelStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     hintText: "Enter your preferred username",
                     hintStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                   ),
@@ -192,10 +200,12 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                     ),
                     labelText: 'Email Address',
                     labelStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     hintText: "Enter your email address",
                     hintStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                   ),
@@ -217,7 +227,9 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                   obscureText: _isObscure,
                   controller: passwordEnteredController,
                   style: const TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w500),
+                      fontFamily: 'Poppins',
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500),
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     focusedBorder: const OutlineInputBorder(
@@ -225,10 +237,12 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                     ),
                     labelText: 'Password',
                     labelStyle: const TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     hintText: "Enter preffered password",
                     hintStyle: const TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     contentPadding: const EdgeInsets.all(10.0),
@@ -262,7 +276,9 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                   obscureText: _isObscure,
                   controller: passwordConfirmedController,
                   style: const TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w500),
+                      fontFamily: 'Poppins',
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500),
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     focusedBorder: const OutlineInputBorder(
@@ -270,10 +286,12 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
                     ),
                     labelText: 'Confirm Password',
                     labelStyle: const TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     hintText: "Enter preffered password again",
                     hintStyle: const TextStyle(
+                      fontFamily: 'Poppins',
                       color: Colors.black38,
                     ),
                     contentPadding: const EdgeInsets.all(10.0),

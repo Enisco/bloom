@@ -10,12 +10,13 @@ class BloomSplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SplashScreen(
-      seconds: 6,
+      seconds: 5,
       navigateAfterSeconds: const SignUpPageOne(),
       title: Text(
         'Bloom',
         textScaleFactor: 2,
         style: TextStyle(
+          fontFamily: 'Poppins',
           fontSize: size.width / 18,
           fontWeight: FontWeight.w800,
         ),
@@ -30,6 +31,7 @@ class BloomSplashScreen extends StatelessWidget {
       loadingText: const Text(
         "Blooming",
         style: TextStyle(
+          fontFamily: 'Poppins',
           fontWeight: FontWeight.w100,
         ),
       ),

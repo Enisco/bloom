@@ -2,16 +2,11 @@
 
 import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:bloom/components/profile_image_avatar.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:icon_badge/icon_badge.dart';
 import 'package:bloom/components/dashboard_components/dashboard_sliver_appbar.dart';
 import 'package:bloom/components/dashboard_components/dashboard_silverlist.dart';
 
-String sliverAppBarTitle = "You're in, Iremide";
-String collapedAppBarTitle = 'Iremide';
+
 int itemcount = 0;
 int tapcount = 0;
 var top = 0.0;

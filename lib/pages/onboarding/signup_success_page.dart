@@ -50,65 +50,64 @@ class _SIgnUpSuccessState extends State<SIgnUpSuccess> {
         margin: EdgeInsets.symmetric(horizontal: size.width / 14, vertical: 10),
         child: SingleChildScrollView(
           child: Center(
-            child: Column(
+            child: Column(children: [
+              const Spacer1(),
+
+              const TopProgressLineCompleted(),
+              //---------------------------------------------------------------------------------------------------------
+
+              const SpacerLarge(),
+              //---------------------------------------------------------------------------------------------------------
+
+              Image(
+                image: const AssetImage("images/success.png"),
+                color: Colors.teal[300],
+                width: size.width / 2,
+                height: size.width / 2,
+              ),
+              //---------------------------------------------------------------------------------------------------------
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Spacer1(),
-
-                  const TopProgressLineCompleted(),
-                  //---------------------------------------------------------------------------------------------------------
-
-                  const SpacerLarge(),
-                  //---------------------------------------------------------------------------------------------------------
-
+                  Text(
+                    "Congratulations",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Poppins',
+                      fontSize: size.height / 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 3.0,
+                  ),
                   Image(
-                    image: const AssetImage("images/success.png"),
-                    color: Colors.teal[300],
-                    width: size.width / 2,
-                    height: size.width / 2,
+                    image: const AssetImage("images/congrat smiley.png"),
+                    width: size.width / 10,
+                    height: size.width / 10,
+                  )
+                ],
+              ),
+              SizedBox(
+                height: size.height / 140,
+              ),
+              ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxHeight: size.height / 30,
+                  maxWidth: size.width,
+                ),
+                child: Text(
+                  "Sign up process is now complete.",
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: size.height / 43,
+                    color: Colors.black45,
                   ),
-                  //---------------------------------------------------------------------------------------------------------
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Congratulations",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontFamily: 'Roboto',
-                          fontSize: size.height / 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 3.0,
-                      ),
-                      Image(
-                        image: const AssetImage("images/congrat smiley.png"),
-                        width: size.width / 10,
-                        height: size.width / 10,
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: size.height / 140,
-                  ),
-                  ConstrainedBox(
-                    constraints: BoxConstraints(
-                      maxHeight: size.height / 30,
-                      maxWidth: size.width,
-                    ),
-                    child: Text(
-                      "Sign up process is now complete.",
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        fontSize: size.height / 43,
-                        color: Colors.black45,
-                      ),
-                    ),
-                  ),
-                  //---------------------------------------------------------------------------------------------------------
-                ]),
+                ),
+              ),
+              //---------------------------------------------------------------------------------------------------------
+            ]),
           ),
         ),
       ),

@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:bloom/pages/mainpages/bloom_homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -28,6 +27,7 @@ class BlackNextButton extends StatelessWidget {
             child: Text(
               "Next",
               style: TextStyle(
+                fontFamily: 'Poppins',
                 color: Colors.white,
                 fontSize: size.height / 45,
               ),
@@ -65,6 +65,7 @@ class SignInButton extends StatelessWidget {
             child: Text(
               "Sign In",
               style: TextStyle(
+                fontFamily: 'Poppins',
                 color: Colors.white,
                 fontSize: size.height / 45,
               ),

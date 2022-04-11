@@ -32,10 +32,10 @@ class FAQs_page extends StatelessWidget {
               child: Text(
                 "Frequently Asked Questions",
                 style: TextStyle(
-                  fontFamily: 'SourceSerifPro',
-                  fontSize: size.height / 45,
-                  fontWeight: FontWeight.w300,
-                  color: Colors.black54,
+                  fontFamily: 'Poppins',
+                  fontSize: size.height / 40,
+                  fontWeight: FontWeight.w700,
+                  color: const Color.fromRGBO(31, 31, 31, 1),
                 ),
               ),
             ),
@@ -54,7 +54,8 @@ class FAQs_page extends StatelessWidget {
                 cursorHeight: 20.0,
                 hintText: 'Search FAQs',
                 hintStyle: TextStyle(
-                  color: Colors.grey[400],
+                  fontFamily: 'Poppins',
+                  color: const Color.fromRGBO(204, 204, 204, 1),
                   fontSize: size.height / 50,
                 ),
                 searchButtonIconColor: Colors.grey[400],

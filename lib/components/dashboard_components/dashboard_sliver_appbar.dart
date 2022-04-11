@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:bloom/components/profile_image_avatar.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:icon_badge/icon_badge.dart';
 
 String extendedAppBarTitle = "Welcome, Iremide";
@@ -85,7 +84,7 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
             ),
             titlePadding: top < appbarThreshold
                 ? EdgeInsets.fromLTRB(
-                    size.width / 4.9, 0.0, 0.0, size.height / 30)
+                    size.width / 4.9, 0.0, 0.0, size.height / 34)
                 : EdgeInsets.fromLTRB(size.width / 14, 0.0, 0.0, 0.0),
           );
         },
