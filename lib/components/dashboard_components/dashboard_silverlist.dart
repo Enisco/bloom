@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:bloom/components/my_spacers.dart';
 import 'package:bloom/components/dashboard_components/silverlist_containers.dart';
-import 'package:bloom/components/dashboard_components/consumption_summary_container.dart';
 // import 'package:bloom/components/dashboard_components/six_geo_bar_chart_container.dart';
 import 'package:bloom/components/dashboard_components/current_power_supply.dart';
+import 'package:bloom/components/dashboard_components/active_power_chart.dart';
 
 String dashboardTopText = 'Here is the data of your personal power consumption '
     'as well as the summary data across the six (6) '
@@ -64,6 +64,18 @@ class _MySliverListState extends State<MySliverList> {
                   //---------------------------------------------------------------------
 
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      // ConsumptionSummaryContainer(),
+                      // SixGeoBarChartContainer(),
+                      CurrentPowerSupplyContainer(),
+                    ],
+                  ),
+                  const Spacer2(),
+                  const Spacer2(),
+                  //---------------------------------------------------------------------
+
+                  Row(
                     children: [
                       Text(
                         "Energy Data Visualization",
@@ -79,86 +91,14 @@ class _MySliverListState extends State<MySliverList> {
                   const Spacer2(),
                   //---------------------------------------------------------------------
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      ConsumptionSummaryContainer(),
-                      // SixGeoBarChartContainer(),
-                      CurrentPowerSupplyContainer(),
-                    ],
-                  ),
-                  const Spacer2(),
-                  //---------------------------------------------------------------------
-
-                  // Row(
-                  //   children: [
-                  //     Text(
-                  //       "Energy Consumption",
-                  //       style: TextStyle(
-                  //         fontFamily: 'Poppins',
-                  //         fontWeight: FontWeight.w600,
-                  //         color: const Color.fromRGBO(31, 31, 31, 1),
-                  //         fontSize: size.height / 43,
-                  //       ),
-                  //     ),
-                  //     SizedBox(
-                  //       width: size.width / 10,
-                  //     ),
-                  //     Container(
-                  //       height: size.width / 12,
-                  //       width: size.width / 24,
-                  //       decoration: BoxDecoration(
-                  //         color: Colors.green.shade700,
-                  //         borderRadius: BorderRadius.only(
-                  //           bottomLeft: Radius.circular(size.width / 60),
-                  //           topLeft: Radius.circular(size.width / 60),
-                  //         ),
-                  //       ),
-                  //     ),
-                  //     Container(
-                  //       height: size.width / 12,
-                  //       width: size.width / 30,
-                  //       color: Colors.white,
-                  //     ),
-                  //     Container(
-                  //       height: size.width / 12,
-                  //       width: size.width / 24,
-                  //       decoration: BoxDecoration(
-                  //         color: Colors.green.shade700,
-                  //         borderRadius: BorderRadius.only(
-                  //           bottomRight: Radius.circular(size.width / 60),
-                  //           topRight: Radius.circular(size.width / 60),
-                  //         ),
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
-                  // const Spacer2(),
-                  //---------------------------------------------------------------------
-
-                  const Spacer2(),
-                  //---------------------------------------------------------------------
                   Container(
-                    color: Colors.greenAccent,
+                    color: Colors.white70,
                     height: size.height / 2,
                     width: size.width,
+                    child: const ActivePowerLineChart(),
                   ),
                   const Spacer1(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        color: Colors.greenAccent,
-                        height: size.height / 2,
-                        width: size.width / 3,
-                      ),
-                      Container(
-                        color: Colors.red,
-                        height: size.height / 2,
-                        width: size.width / 3,
-                      )
-                    ],
-                  )
+                  //---------------------------------------------------------------------
                 ],
               ),
             ),

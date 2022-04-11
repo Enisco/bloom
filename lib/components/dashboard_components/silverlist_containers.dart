@@ -218,30 +218,6 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
                   ),
                 ],
               )
-              // RichText(
-              //   text: TextSpan(
-              //     text: "200",
-              //     style: TextStyle(
-              //       // color: const Color.fromRGBO(31, 31, 31, 1),
-              //       color: Colors.black87,
-              //       fontFamily: 'Poppins',
-              //       fontSize: size.width / 12,
-              //       fontWeight: FontWeight.w600,
-              //     ),
-              //     children: <TextSpan>[
-              //       TextSpan(
-              //         text: " meters",
-              //         style: TextStyle(
-              //           color: Colors.black87,
-              //           // color: const Color.fromRGBO(31, 31, 31, 1),
-              //           fontFamily: 'Poppins',
-              //           fontSize: size.width / 25,
-              //           fontWeight: FontWeight.w400,
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
             ],
           ),
         ),

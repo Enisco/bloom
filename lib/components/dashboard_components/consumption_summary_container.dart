@@ -4,6 +4,7 @@ import 'package:bloom/components/my_spacers.dart';
 import 'package:bloom/pages/onboarding/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:bloom/components/dashboard_components/active_power_chart.dart';
 
 class ConsumptionSummaryContainer extends StatefulWidget {
   const ConsumptionSummaryContainer({Key? key}) : super(key: key);
@@ -93,23 +94,6 @@ class _ConsumptionSummaryContainerState
               ),
               const SpacerSmall(),
               //---------------------------------------------------------------------
-              Row(
-                children: [
-                  CircleAvatar(
-                    radius: size.width / 90,
-                    backgroundColor: const Color.fromRGBO(0, 167, 167, 1),
-                  ),
-                  Text(
-                    " Active Meter Connections",
-                    style: TextStyle(
-                      color: const Color.fromRGBO(57, 57, 57, 1),
-                      fontFamily: 'Poppins',
-                      fontSize: size.width / 33,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ],
-              ),
               const Spacer0(),
               //---------------------------------------------------------------------
 
@@ -117,8 +101,8 @@ class _ConsumptionSummaryContainerState
                 color: Colors.white,
                 height: size.height / 9.5,
                 width: size.width / 2.40,
-                // child: ,
-              )
+                child: const VoltageLineChart(),
+              ),
             ],
           ),
         ),

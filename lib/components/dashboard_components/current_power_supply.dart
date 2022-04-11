@@ -4,6 +4,7 @@ import 'package:bloom/components/my_spacers.dart';
 import 'package:bloom/pages/onboarding/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+// import 'package:bloom/components/dashboard_components/active_power_chart.dart';
 
 double currentVoltage = 220;
 double currentActivepower = 1.85;
@@ -41,7 +42,8 @@ class _CurrentPowerSupplyContainerState
         color: const Color.fromRGBO(252, 252, 252, 1),
         borderRadius: BorderRadius.all(Radius.circular(size.width / 40)),
       ),
-      width: size.width / 2.42,
+      // width: size.width / 2.42,
+      width: size.width - (size.width / 7),
       height: size.height / 4,
       child: InkWell(
         child: TextButton(
@@ -63,16 +65,10 @@ class _CurrentPowerSupplyContainerState
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              const SpacerUltraSmall(),
-              //---------------------------------------------------------------------
-
-              // Container(
-              //   color: Colors.white,
-              //   height: size.height / 15,
-              //   width: size.width / 2.40,
-              // ),
+              const SpacerUltraSmall(),  
               const Spacer0(),
               //---------------------------------------------------------------------
+
               EachPowerParameter(
                 R: 249,
                 G: 87,
