@@ -4,7 +4,7 @@ import 'package:bloom/components/my_spacers.dart';
 import 'package:bloom/pages/onboarding/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:bloom/components/dashboard_components/active_power_chart.dart';
+import 'package:bloom/components/dashboard_components/active_power_energy_chart.dart';
 
 class ConsumptionSummaryContainer extends StatefulWidget {
   const ConsumptionSummaryContainer({Key? key}) : super(key: key);

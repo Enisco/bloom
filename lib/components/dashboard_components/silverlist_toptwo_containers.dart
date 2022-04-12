@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:bloom/components/my_spacers.dart';
-import 'package:bloom/pages/onboarding/signup_page2.dart';
+import 'package:bloom/components/dashboard_components/energy_usage_details_page.dart';
 import 'package:bloom/pages/onboarding/signup_page1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +19,7 @@ class EnergyConsumptionContainer extends StatefulWidget {
 
 class _EnergyConsumptionContainerState
     extends State<EnergyConsumptionContainer> {
-  void goToPowerAnalysisPage() {
+  void goToEnergyAnalysisPage() {
     Navigator.push(
       context,
       PageTransition(
@@ -27,7 +27,7 @@ class _EnergyConsumptionContainerState
           curve: Curves.easeInOutCirc,
           duration: const Duration(milliseconds: 600),
           reverseDuration: const Duration(milliseconds: 600),
-          child: const SIgnUpTwo(),
+          child: const EnergyDetailsPage(),
           inheritTheme: true,
           ctx: context),
     );
@@ -47,7 +47,7 @@ class _EnergyConsumptionContainerState
       child: InkWell(
         child: TextButton(
           onPressed: () {
-            goToPowerAnalysisPage();
+            goToEnergyAnalysisPage();
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

@@ -9,7 +9,7 @@ import 'package:bloom/components/team_animation_components/singleframe_all_team_
 import 'package:bloom/components/team_animation_components/team_details.dart';
 // import 'package:bloom/components/top_progress_bars.dart';
 
-String ourWebsiteUrl = 'http://www.google.com';
+String ourWebsiteUrl = 'https://api.bloomloadanalysis.ng';
 String ourWhatsappUrl =
     'https://api.whatsapp.com/send?phone=2348101564160&text=Welcome%20to%20Bloom?%20How%20can%20we%20help%20you?';
 //--------------------------------------------------------------------------------------

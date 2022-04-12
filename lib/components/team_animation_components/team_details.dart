@@ -78,6 +78,16 @@ List<String> detailsOfPersonText = [
       ' and smart power grid.',
   //------------------------------------------------------------------------------
 
+  'John Idogun is a lecturer and researcher with over fifteen (15) years'
+      ' of experience in communication systems, computer communication and networking.'
+      ' Her research interest includes location-based information, crowdsourcing,'
+      ' mobile communication and sensor networks. Other research interest include '
+      'datamining techniques, gamification design and performance evaluation methods '
+      'and techniques. Other less prominent research interest includes optimization'
+      ' models for the development of cloud networks, traffic monitoring and management'
+      ' and smart power grid.',
+  //------------------------------------------------------------------------------
+
   'Iremide Blessing Oyelaja is a lecturer and researcher with over fifteen (15) years'
       ' of experience in communication systems, computer communication and networking.'
       ' Her research interest includes location-based information, crowdsourcing,'
@@ -89,16 +99,6 @@ List<String> detailsOfPersonText = [
   //------------------------------------------------------------------------------
 
   'Taiwo Victoria Kolawole is a lecturer and researcher with over fifteen (15) years'
-      ' of experience in communication systems, computer communication and networking.'
-      ' Her research interest includes location-based information, crowdsourcing,'
-      ' mobile communication and sensor networks. Other research interest include '
-      'datamining techniques, gamification design and performance evaluation methods '
-      'and techniques. Other less prominent research interest includes optimization'
-      ' models for the development of cloud networks, traffic monitoring and management'
-      ' and smart power grid.',
-  //------------------------------------------------------------------------------
-
-  'John Idogun is a lecturer and researcher with over fifteen (15) years'
       ' of experience in communication systems, computer communication and networking.'
       ' Her research interest includes location-based information, crowdsourcing,'
       ' mobile communication and sensor networks. Other research interest include '

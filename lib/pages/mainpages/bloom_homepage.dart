@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'faqs_page.dart';
 import 'about_us.dart';
-import 'team_page.dart';
 import 'dashboard.dart';
+import 'settings.dart';
 
 int _selectedIndex = 0;
 const List<Widget> appPages = <Widget>[
   Dashboard(),
   FAQs_page(),
   AboutUsPage(),
-  TeamDetailsPage(),
+  SettingsPage(),
 ];
 
 class BloomHomepage extends StatefulWidget {

@@ -108,6 +108,7 @@ class TeamDetailsPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0.0,
+          shadowColor: Colors.black54,
           leading: Builder(
             builder: (BuildContext context) {
               return IconButton(
@@ -157,12 +158,13 @@ class TeamDetailsPage extends StatelessWidget {
           ),
           child: Center(
             child: Container(
-              height: size.height,
+              height: size.height - (size.height / 150),
               width: size.width - (size.width / 25),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.0),
                 border: Border.all(
-                  color: Colors.grey.shade300,
+                  // color: Colors.grey.shade300,
+                  color: Colors.white,
                 ),
               ),
               child: ListView(

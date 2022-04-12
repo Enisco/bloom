@@ -37,7 +37,7 @@ class DetailsOfPersonsPage extends StatelessWidget {
           },
         ),
         title: Text(nameText),
-        backgroundColor: Colors.amber[800],
+        backgroundColor: Colors.amber[900],
       ),
       body: Container(
         decoration: const BoxDecoration(
