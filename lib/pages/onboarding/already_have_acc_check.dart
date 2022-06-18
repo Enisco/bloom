@@ -27,10 +27,10 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
           },
           child: Text(
             login ? "Sign Up" : "Sign In",
-            style: TextStyle(
+            style: const TextStyle(
               fontFamily: 'Poppins',
               color: Colors.amber,
-              fontSize: size.height / 43,
+              fontSize: 14,
               fontWeight: FontWeight.bold,
             ),
           ),

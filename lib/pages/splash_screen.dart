@@ -1,7 +1,7 @@
 // ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'onboarding/signup_page1.dart';
+import 'package:flutter/material.dart';
 
 class BloomSplashScreen extends StatelessWidget {
   const BloomSplashScreen({key}) : super(key: key);
@@ -10,7 +10,7 @@ class BloomSplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SplashScreen(
-      seconds: 5,
+      seconds: 4,
       navigateAfterSeconds: const SignUpPageOne(),
       title: Text(
         'Bloom',
@@ -22,7 +22,7 @@ class BloomSplashScreen extends StatelessWidget {
         ),
       ),
       image: Image(
-        image: const AssetImage("images/light bulb.gif"),
+        image: const AssetImage("images/lightbulb.gif"),
         color: Colors.amber.shade700,
         width: size.width / 3,
         height: size.width / 3,

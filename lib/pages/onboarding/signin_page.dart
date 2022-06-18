@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:bloom/pages/mainpages/bloom_homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:bloom/components/buttons.dart';
@@ -20,6 +21,20 @@ class SignInPage extends StatefulWidget {
 
 class _SignInPageState extends State<SignInPage> {
   bool _isObscure = true;
+
+  void goToHomepage() {
+    Navigator.push(
+      context,
+      PageTransition(
+          type: PageTransitionType.rightToLeft,
+          curve: Curves.easeInToLinear,
+          duration: const Duration(milliseconds: 1000),
+          reverseDuration: const Duration(milliseconds: 1000),
+          child: const BloomHomepage(),
+          inheritTheme: true,
+          ctx: context),
+    );
+  }
 
   void goToSignUpPage() {
     Navigator.push(
@@ -50,130 +65,87 @@ class _SignInPageState extends State<SignInPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Spacer1(),
+              //---------------------------------------------------------------------------------------------------------
 
+              const Spacer1(),
               const TopProgressLineCompleted(),
               const Spacer1(),
-              Text(
+              const Text(
                 "Sign In",
                 style: TextStyle(
                   fontFamily: 'Poppins',
-                  color: Colors.black,
-                  fontSize: size.height / 30,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
               SizedBox(
                 height: size.height / 140,
               ),
-              ConstrainedBox(
-                constraints: BoxConstraints(
-                  maxHeight: size.height / 20,
-                  maxWidth: size.width,
-                ),
-                child: Text(
+              SizedBox(
+                width: size.width,
+                child: const Text(
                   "Welcome Back! Enter your details to continue",
                   style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: size.height / 43,
-                    color: Colors.black38,
-                  ),
+                      fontFamily: 'Poppins',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
                 ),
               ),
-              //---------------------------------------------------------------------------------------------------------
-
-              const Spacer3(),
-              //---------------------------------------------------------------------------------------------------------
-
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                ),
-                width: size.width,
-                height: size.height / 18,
-                child: TextField(
-                  controller: usernameController,
-                  style: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500),
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: InputBorder.none,
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 1.0),
-                    ),
-                    labelText: 'Username',
-                    labelStyle: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    hintText: "Enter username or  email",
-                    hintStyle: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                  ),
-                ),
-              ),
-              //---------------------------------------------------------------------------------------------------------
-
-              const Spacer2(),
-
-              //---------------------------------------------------------------------------------------------------------
-
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                ),
-                width: size.width,
-                height: size.height / 18,
-                child: TextField(
-                  obscureText: _isObscure,
-                  controller: passwordController,
-                  style: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500),
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    focusedBorder: const OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 1.0),
-                    ),
-                    labelText: 'Password',
-                    labelStyle: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    hintText: "Enter your password",
-                    hintStyle: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    contentPadding: const EdgeInsets.all(10.0),
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                          _isObscure ? Icons.visibility : Icons.visibility_off),
-                      onPressed: () {
-                        setState(
-                          () {
-                            _isObscure = !_isObscure;
-                          },
-                        );
-                      },
-                    ),
-                  ),
-                ),
-              ),
-              //---------------------------------------------------------------------------------------------------------
 
               const Spacer4(),
-              const SignInButton(),
-              const Spacer1(),
               //---------------------------------------------------------------------------------------------------------
+
+              TextField(
+                controller: usernameController,
+                style: const TextStyle(
+                    fontFamily: 'Poppins',
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500),
+                decoration: const InputDecoration(
+                  labelText: 'Username',
+                  hintText: "Enter username or email",
+                ),
+              ),
+
+              const Spacer2(),
+              //---------------------------------------------------------------------------------------------------------
+
+              TextField(
+                obscureText: _isObscure,
+                controller: passwordController,
+                style: const TextStyle(
+                    fontFamily: 'Poppins',
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500),
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  hintText: "Enter your password",
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                        _isObscure ? Icons.visibility : Icons.visibility_off),
+                    onPressed: () {
+                      setState(
+                        () {
+                          _isObscure = !_isObscure;
+                        },
+                      );
+                    },
+                  ),
+                ),
+              ),
+
+              const Spacer4(),
+              //---------------------------------------------------------------------------------------------------------
+
+              BlackNextButton(
+                pressed: goToHomepage,
+                text: 'Sign In',
+              ),
+              const Spacer2(),
+              //---------------------------------------------------------------------------------------------------------
+              
               AlreadyHaveAnAccountCheck(press: goToSignUpPage),
+              const Spacer2(),
             ],
           ),
         ),

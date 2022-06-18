@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class BlackNextButton extends StatelessWidget {
+  final String text;
   final Function pressed;
 
   const BlackNextButton({
-    required this.pressed,
-  });
+    Key? key,
+    required this.pressed, required this.text,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class BlackNextButton extends StatelessWidget {
           splashColor: Colors.white10,
           child: TextButton(
             child: Text(
-              "Next",
+              text,
               style: TextStyle(
                 fontFamily: 'Poppins',
                 color: Colors.white,
@@ -34,7 +36,7 @@ class BlackNextButton extends StatelessWidget {
             ),
             onPressed: () {
               // ignore: avoid_print
-              print("Next");
+              print(text);
               pressed();
             },
           ),

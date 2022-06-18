@@ -75,7 +75,7 @@ class _EnergyConsumptionContainerState
                 ),
               ),
               Text(
-                "Consumption       ",
+                "Consumption",
                 style: TextStyle(
                   color: const Color.fromRGBO(24, 160, 251, 1),
                   fontFamily: 'Poppins',

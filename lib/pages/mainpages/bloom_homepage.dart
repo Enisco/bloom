@@ -21,9 +21,11 @@ class BloomHomepage extends StatefulWidget {
 
 class _BloomHomepageState extends State<BloomHomepage> {
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    setState(
+      () {
+        _selectedIndex = index;
+      },
+    );
   }
 
   @override
@@ -33,15 +35,13 @@ class _BloomHomepageState extends State<BloomHomepage> {
 
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
-          selectedIconTheme: IconThemeData(
+          selectedIconTheme: const IconThemeData(
             color: Colors.black54,
-            size: size.width / 10,
+            size: 30,
           ),
           selectedItemColor: Colors.black54,
-          selectedLabelStyle: TextStyle(
-              fontSize: size.width / 25,
-                            fontFamily: 'Poppins',
-              fontWeight: FontWeight.w800),
+          selectedLabelStyle: const TextStyle(
+              fontSize: 12, fontFamily: 'Poppins', fontWeight: FontWeight.w700),
           showUnselectedLabels: true,
           showSelectedLabels: true,
           onTap: _onItemTapped,

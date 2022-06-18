@@ -1,13 +1,9 @@
-// ignore_for_file: use_key_in_widget_constructors, camel_case_types
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-
 import 'package:bloom/components/my_spacers.dart';
 import 'package:bloom/components/team_animation_components/singleframe_all_team_faces.dart';
 import 'package:bloom/components/team_animation_components/team_details.dart';
-// import 'package:bloom/components/top_progress_bars.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 String ourWebsiteUrl = 'https://api.bloomloadanalysis.ng';
 String ourWhatsappUrl =
@@ -15,8 +11,8 @@ String ourWhatsappUrl =
 //--------------------------------------------------------------------------------------
 
 void goToOurWebsite(String ourWebsiteUrl) async {
-  if (await canLaunch(ourWebsiteUrl)) {
-    await launch(
+  if (await canLaunchUrlString(ourWebsiteUrl)) {
+    await launchUrlString(
       ourWebsiteUrl,
     );
   } else {
@@ -25,8 +21,8 @@ void goToOurWebsite(String ourWebsiteUrl) async {
 }
 
 void goToOurWhatsapp(String ourWhatsappUrl) async {
-  if (await canLaunch(ourWhatsappUrl)) {
-    await launch(
+  if (await canLaunchUrlString(ourWhatsappUrl)) {
+    await launchUrlString(
       ourWhatsappUrl,
     );
   } else {
@@ -51,7 +47,7 @@ class AboutUsPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image(
-                  image: const AssetImage("images/yellow bulb.png"),
+                  image: const AssetImage("images/yellowbulb.png"),
                   width: size.width / 8,
                   height: size.width / 8,
                 ),

@@ -25,7 +25,7 @@ List<String> roleText = [
 ];
 
 List<String> imageName = [
-  "images/Dr Mrs Dahunsi.png",
+  "images/DrMrsDahunsi.png",
   "images/Abayomi.png",
   "images/Hameed.png",
   "images/Sodiq.png",

@@ -1,5 +1,9 @@
-import 'package:bloom/pages/splash_screen.dart';
+// @dart=2.9
+
+import 'package:bloom/pages/mainpages/bloom_homepage.dart';
 import 'package:flutter/material.dart';
+
+import 'components/constants.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,19 +12,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.grey,
+        inputDecorationTheme: textFeildInputDecoration,
+      ),
       title: 'Bloom',
-      home: Scaffold(
+      home: const Scaffold(
         // appBar: AppBar(title: const Text('Bloom')),
-        body: BloomSplashScreen(),
+        // body: BloomSplashScreen(),
         // body: SignUpPageOne(),
         // body: SIgnUpTwo(),
         // body: SIgnUpSuccess(),
-        // body: LoginPage(),
+        // body: SignInPage(),
         // body: FAQs_page(),
         // body: AboutUsPage(),
         // body: TeamDetailsPage(),
-        // body: BloomHomepage(),
+        body: BloomHomepage(),
         // body: Dashboard(),
       ),
     );

@@ -14,6 +14,7 @@ TextEditingController usernameController = TextEditingController();
 TextEditingController emailAddressController = TextEditingController();
 TextEditingController passwordEnteredController = TextEditingController();
 TextEditingController passwordConfirmedController = TextEditingController();
+bool enableConfirmPasswordField = false;
 
 class SIgnUpTwo extends StatefulWidget {
   const SIgnUpTwo({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
     Navigator.push(
       context,
       PageTransition(
-          type: PageTransitionType.bottomToTop,
+          type: PageTransitionType.topToBottom,
           curve: Curves.easeInOutCirc,
           duration: const Duration(milliseconds: 1000),
           reverseDuration: const Duration(milliseconds: 1000),
@@ -60,265 +61,158 @@ class _SIgnUpTwoState extends State<SIgnUpTwo> {
     return Scaffold(
         body: SafeArea(
       bottom: false,
-      child: Container(
-        height: double.infinity,
-        width: double.infinity,
-        margin: EdgeInsets.symmetric(horizontal: size.width / 14, vertical: 10),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              //---------------------------------------------------------------------------------------------------------
+      child: SingleChildScrollView(
+        padding:
+            EdgeInsets.symmetric(horizontal: size.width / 15, vertical: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            //---------------------------------------------------------------------------------------------------------
 
-              const Spacer1(),
-              const TopProgressLineMiddle(),
-              const Spacer1(),
-              //---------------------------------------------------------------------------------------------------------
+            const Spacer1(),
+            const TopProgressLineMiddle(),
+            const Spacer1(),
+            //---------------------------------------------------------------------------------------------------------
 
-              Text(
-                "Sign Up",
+            const Text(
+              "Sign Up",
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 30,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            SizedBox(
+              height: size.height / 140,
+            ),
+            SizedBox(
+              width: size.width,
+              child: const Text(
+                "We require your full details to create your account",
                 style: TextStyle(
-                  color: Colors.black,
                   fontFamily: 'Poppins',
-                  fontSize: size.height / 30,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
-              SizedBox(
-                height: size.height / 140,
+            ),
+
+            const Spacer3(),
+            //---------------------------------------------------------------------------------------------------------
+
+            TextField(
+              controller: fullameController,
+              style: const TextStyle(
+                  fontFamily: 'Poppins',
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500),
+              decoration: const InputDecoration(
+                labelText: 'Full Name',
+                hintText: "Enter your full name",
               ),
-              ConstrainedBox(
-                constraints: BoxConstraints(
-                  maxHeight: size.height / 20,
-                  maxWidth: size.width,
-                ),
-                child: Text(
-                  "We require your full details to create your account",
-                  style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: size.height / 43,
-                    color: Colors.black38,
-                  ),
-                ),
+            ),
+
+            const Spacer2(),
+            //---------------------------------------------------------------------------------------------------------
+
+            TextField(
+              controller: usernameController,
+              style: const TextStyle(
+                  fontFamily: 'Poppins',
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500),
+              decoration: const InputDecoration(
+                labelText: 'Username',
+                hintText: "Enter your preferred username",
               ),
-              //---------------------------------------------------------------------------------------------------------
+            ),
 
-              const Spacer3(),
-              //---------------------------------------------------------------------------------------------------------
+            const Spacer2(),
+            //---------------------------------------------------------------------------------------------------------
 
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                ),
-                width: size.width,
-                height: size.height / 18,
-                child: TextField(
-                  controller: fullameController,
-                  style: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500),
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: InputBorder.none,
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 1.0),
-                    ),
-                    labelText: 'Full Name',
-                    labelStyle: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    hintText: "Enter your full name",
-                    hintStyle: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                  ),
-                ),
+            TextField(
+              controller: emailAddressController,
+              style: const TextStyle(
+                  color: Colors.black, fontWeight: FontWeight.w500),
+              decoration: const InputDecoration(
+                labelText: 'Email Address',
+                hintText: "Enter your email address",
               ),
-              //---------------------------------------------------------------------------------------------------------
+            ),
 
-              const Spacer2(),
-              //---------------------------------------------------------------------------------------------------------
+            const Spacer2(),
+            //---------------------------------------------------------------------------------------------------------
 
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                ),
-                width: size.width,
-                height: size.height / 18,
-                child: TextField(
-                  controller: usernameController,
-                  style: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500),
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: InputBorder.none,
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 1.0),
-                    ),
-                    labelText: 'Username',
-                    labelStyle: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    hintText: "Enter your preferred username",
-                    hintStyle: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                  ),
-                ),
-              ),
-
-              //---------------------------------------------------------------------------------------------------------
-
-              const Spacer2(),
-              //---------------------------------------------------------------------------------------------------------
-
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                ),
-                width: size.width,
-                height: size.height / 18,
-                child: TextField(
-                  controller: emailAddressController,
-                  style: const TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w500),
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: InputBorder.none,
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 1.0),
-                    ),
-                    labelText: 'Email Address',
-                    labelStyle: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    hintText: "Enter your email address",
-                    hintStyle: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                  ),
-                ),
-              ),
-              //---------------------------------------------------------------------------------------------------------
-
-              const Spacer2(),
-              //---------------------------------------------------------------------------------------------------------
-
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                ),
-                width: size.width,
-                height: size.height / 18,
-                child: TextField(
-                  obscureText: _isObscure,
-                  controller: passwordEnteredController,
-                  style: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500),
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    focusedBorder: const OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 1.0),
-                    ),
-                    labelText: 'Password',
-                    labelStyle: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    hintText: "Enter preffered password",
-                    hintStyle: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    contentPadding: const EdgeInsets.all(10.0),
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                          _isObscure ? Icons.visibility : Icons.visibility_off),
-                      onPressed: () {
-                        setState(
-                          () {
-                            _isObscure = !_isObscure;
-                          },
-                        );
+            TextField(
+              obscureText: _isObscure,
+              controller: passwordEnteredController,
+              style: const TextStyle(
+                  fontFamily: 'Poppins',
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500),
+              decoration: InputDecoration(
+                labelText: 'Password',
+                hintText: "Enter preffered password",
+                suffixIcon: IconButton(
+                  icon: Icon(
+                      _isObscure ? Icons.visibility : Icons.visibility_off),
+                  onPressed: () {
+                    setState(
+                      () {
+                        _isObscure = !_isObscure;
                       },
-                    ),
-                  ),
+                    );
+                  },
                 ),
               ),
-              //---------------------------------------------------------------------------------------------------------
+              onChanged: (passwordValue) {
+                setState(
+                  () {
+                    enableConfirmPasswordField = passwordValue.length >= 5;
+                  },
+                );
+              },
+            ),
 
-              const Spacer2(),
-              //---------------------------------------------------------------------------------------------------------
+            const Spacer2(),
+            //---------------------------------------------------------------------------------------------------------
 
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                ),
-                width: size.width,
-                height: size.height / 18,
-                child: TextField(
-                  obscureText: _isObscure,
-                  controller: passwordConfirmedController,
-                  style: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500),
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    focusedBorder: const OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 1.0),
-                    ),
-                    labelText: 'Confirm Password',
-                    labelStyle: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    hintText: "Enter preffered password again",
-                    hintStyle: const TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    contentPadding: const EdgeInsets.all(10.0),
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                          _isObscure ? Icons.visibility : Icons.visibility_off),
-                      onPressed: () {
-                        setState(
-                          () {
-                            _isObscure = !_isObscure;
-                          },
-                        );
+            TextField(
+              enabled: enableConfirmPasswordField,
+              obscureText: _isObscure,
+              controller: passwordConfirmedController,
+              style: const TextStyle(
+                  fontFamily: 'Poppins',
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500),
+              decoration: InputDecoration(
+                labelText: 'Confirm Password',
+                hintText: "Enter preffered password again",
+                suffixIcon: IconButton(
+                  icon: Icon(
+                      _isObscure ? Icons.visibility : Icons.visibility_off),
+                  onPressed: () {
+                    setState(
+                      () {
+                        _isObscure = !_isObscure;
                       },
-                    ),
-                  ),
+                    );
+                  },
                 ),
               ),
-              //---------------------------------------------------------------------------------------------------------
+            ),
 
-              const Spacer4(),
-              BlackNextButton(pressed: goToSignUpSuccess),
-              const Spacer1(),
-              //---------------------------------------------------------------------------------------------------------
+            const Spacer4(),
+            BlackNextButton(
+              pressed: goToSignUpSuccess,
+              text: 'Next',
+            ),
+            //---------------------------------------------------------------------------------------------------------
 
-              AlreadyHaveAnAccountCheck(login: false, press: goToSignInPage),
-            ],
-          ),
+            const Spacer2(),
+            AlreadyHaveAnAccountCheck(login: false, press: goToSignInPage),
+            const Spacer2(),
+          ],
         ),
       ),
     ));

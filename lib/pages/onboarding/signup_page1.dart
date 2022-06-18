@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-
 import 'package:bloom/components/my_spacers.dart';
 import 'package:bloom/components/buttons.dart';
 import 'package:bloom/components/top_progress_bars.dart';
@@ -25,8 +24,8 @@ class _SignUpPageOneState extends State<SignUpPageOne> {
       PageTransition(
           type: PageTransitionType.rightToLeft,
           curve: Curves.easeInToLinear,
-          duration: const Duration(milliseconds: 1000),
-          reverseDuration: const Duration(milliseconds: 1000),
+          duration: const Duration(milliseconds: 700),
+          reverseDuration: const Duration(milliseconds: 700),
           child: const SIgnUpTwo(),
           inheritTheme: true,
           ctx: context),
@@ -39,8 +38,8 @@ class _SignUpPageOneState extends State<SignUpPageOne> {
       PageTransition(
           type: PageTransitionType.rightToLeftWithFade,
           curve: Curves.easeInToLinear,
-          duration: const Duration(milliseconds: 1000),
-          reverseDuration: const Duration(milliseconds: 1000),
+          duration: const Duration(milliseconds: 700),
+          reverseDuration: const Duration(milliseconds: 700),
           child: const SignInPage(),
           inheritTheme: true,
           ctx: context),
@@ -52,114 +51,87 @@ class _SignUpPageOneState extends State<SignUpPageOne> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-        body: SafeArea(
-      bottom: false,
-      child: Container(
-        height: double.infinity,
-        width: double.infinity,
-        margin: EdgeInsets.symmetric(horizontal: size.width / 14, vertical: 10),
+      body: SafeArea(
+        bottom: false,
         child: SingleChildScrollView(
+          padding:
+              EdgeInsets.symmetric(horizontal: size.width / 15, vertical: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Spacer1(),
+              //---------------------------------------------------------------------------------------------------------
 
+              const Spacer1(),
               const TopProgressLineBeginning(),
               const Spacer1(),
               //---------------------------------------------------------------------------------------------------------
 
-              Text(
+              const Text(
                 "Sign Up",
                 style: TextStyle(
-                  color: Colors.black,
                   fontFamily: 'Poppins',
-                  fontSize: size.height / 30,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
               SizedBox(
                 height: size.height / 140,
               ),
-              ConstrainedBox(
-                  constraints: BoxConstraints(
-                    maxHeight: size.height / 18,
-                    maxWidth: size.width,
-                  ),
-                  child: Text(
-                    "Enter your phone number to start your signing up process",
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: size.height / 43,
-                      color: Colors.black38,
-                    ),
-                  )),
-
-              //---------------------------------------------------------------------------------------------------------
-
-              const Spacer3(),
-              //---------------------------------------------------------------------------------------------------------
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                ),
+              SizedBox(
                 width: size.width,
-                height: size.height / 18,
-                child: IntlPhoneField(
-                  initialCountryCode: 'NG',
-                  flagsButtonMargin: const EdgeInsets.fromLTRB(
-                    10.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                  ),
-                  dropdownIcon: const Icon(
-                    Icons.arrow_drop_down,
-                  ),
-                  dropdownIconPosition: IconPosition.trailing,
-                  disableLengthCheck: true,
-                  textAlignVertical: const TextAlignVertical(y: 0.0),
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.all(10),
-                    border: InputBorder.none,
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 1.0),
-                    ),
-                    labelText: '903 224 2379',
-                    labelStyle: TextStyle(
+                child: const Text(
+                  "Enter your phone number to start your signing up process",
+                  style: TextStyle(
                       fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                    hintText: "Your Phone Number",
-                    hintStyle: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Colors.black38,
-                    ),
-                  ),
-                  onChanged: (phone) {
-                    print(phone.completeNumber);
-                  },
-                  onCountryChanged: (country) {
-                    print('Country changed to: ' + country.name);
-                  },
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
                 ),
               ),
+
+              const Spacer4(),
               //---------------------------------------------------------------------------------------------------------
+              IntlPhoneField(
+                initialCountryCode: 'NG',
+                flagsButtonMargin: const EdgeInsets.fromLTRB(
+                  10.0,
+                  5.0,
+                  5.0,
+                  5.0,
+                ),
+                dropdownIcon: const Icon(
+                  Icons.arrow_drop_down,
+                ),
+                dropdownIconPosition: IconPosition.trailing,
+                disableLengthCheck: true,
+                textAlignVertical: const TextAlignVertical(y: 0.1),
+                decoration: const InputDecoration(
+                  labelText: '903 224 2379',
+                  hintText: "Your Phone Number",
+                ),
+                onChanged: (phone) {
+                  print(phone.completeNumber);
+                },
+                onCountryChanged: (country) {
+                  print('Country changed to: ' + country.name);
+                },
+              ),
 
               const Spacer4(),
               //---------------------------------------------------------------------------------------------------------
 
-              BlackNextButton(pressed: goToSignUpTwo),
-              //--------------------------------------------------------------------------------------------------------
-
-              const Spacer1(),
+              BlackNextButton(
+                pressed: goToSignUpTwo,
+                text: 'Next',
+              ),
+              const Spacer2(),
               //---------------------------------------------------------------------------------------------------------
 
               AlreadyHaveAnAccountCheck(login: false, press: goToSignInPage),
+              const Spacer2(),
             ],
           ),
         ),
       ),
-    ));
+    );
   }
 }
