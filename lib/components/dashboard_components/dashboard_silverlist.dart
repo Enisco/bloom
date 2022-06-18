@@ -34,17 +34,14 @@ class _MySliverListState extends State<MySliverList> {
 
                   Column(
                     children: [
-                      ConstrainedBox(
-                        constraints: BoxConstraints(
-                          maxWidth: size.width,
-                          maxHeight: size.height / 10,
-                        ),
+                      SizedBox(
+                        width: size.width,
                         child: Text(
                           dashboardTopText,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontFamily: 'Poppins',
-                            color: Colors.black.withOpacity(0.7),
-                            fontSize: size.width / 23,
+                            color: Color.fromRGBO(57, 57, 57, 1),
+                            fontSize: 14,
                             fontWeight: FontWeight.w400,
                           ),
                         ),

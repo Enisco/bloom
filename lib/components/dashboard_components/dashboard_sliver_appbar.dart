@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:bloom/components/profile_image_avatar.dart';
 import 'package:icon_badge/icon_badge.dart';
 
-String extendedAppBarTitle = "Welcome, Iremide";
+String extendedAppBarTitle = "Welcome", userFirstName = "Iremide";
 String collapedAppBarTitle = 'Bloom';
 int itemcount = 0;
 int tapcount = 0;
@@ -33,7 +33,7 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
       ),
       leadingWidth: size.width / 4,
       collapsedHeight: size.height / 11.5,
-      expandedHeight: size.height / 6.5,
+      expandedHeight: size.height / 7.5,
       backgroundColor: Colors.white,
       foregroundColor: Colors.black,
       //----------------------------------------------------------------------------
@@ -72,12 +72,10 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
               child: Text(
                 top < appbarThreshold
                     ? collapedAppBarTitle
-                    : extendedAppBarTitle,
+                    : '$extendedAppBarTitle, $userFirstName',
                 style: TextStyle(
-                    fontSize: top < appbarThreshold
-                        ? size.height / 35
-                        : size.height / 56,
-                    color: Colors.black87,
+                    fontSize: top < appbarThreshold ? 20 : 15,
+                    color: const Color.fromRGBO(31, 31, 31, 1),
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w700),
               ),

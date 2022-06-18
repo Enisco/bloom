@@ -1,9 +1,12 @@
 // ignore_for_file: must_be_immutable, non_constant_identifier_names
 
+import 'dart:math';
+import 'dart:async';
+
+import 'package:bloom/components/dashboard_components/power_usage_details_page.dart';
 import 'package:bloom/components/my_spacers.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:bloom/components/dashboard_components/power_usage_details_page.dart';
 
 double currentVoltage = 220;
 double currentActivepower = 1.85;
@@ -32,6 +35,24 @@ class _CurrentPowerSupplyContainerState
     );
   }
 
+  Timer? timer;
+
+  @override
+  void initState() {
+    super.initState();
+    Timer.periodic(
+      const Duration(seconds: 5),
+      (timer) {
+        setState(
+          () {
+            currentVoltage = double.parse(((Random().nextInt(20000) / 1000) + 210)
+                .toStringAsFixed(1));
+          },
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -41,7 +62,6 @@ class _CurrentPowerSupplyContainerState
         color: const Color.fromRGBO(252, 252, 252, 1),
         borderRadius: BorderRadius.all(Radius.circular(size.width / 40)),
       ),
-      // width: size.width / 2.42,
       width: size.width - (size.width / 7),
       height: size.height / 8,
       child: InkWell(
@@ -88,6 +108,7 @@ class _CurrentPowerSupplyContainerState
     );
   }
 }
+//----------------------------------------------------------------------
 
 class EachPowerParameter extends StatelessWidget {
   const EachPowerParameter({
@@ -141,19 +162,16 @@ class EachPowerParameter extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // SizedBox(
-            //   width: size.width / 7,
-            // ),
             CircleAvatar(
-              radius: size.width / 90,
+              radius: 4,
               backgroundColor: Color.fromRGBO(R, G, B, O),
             ),
             Text(
               parameter,
-              style: TextStyle(
-                color: const Color.fromRGBO(57, 57, 57, 1),
+              style: const TextStyle(
+                color: Color.fromRGBO(57, 57, 57, 1),
                 fontFamily: 'Poppins',
-                fontSize: size.width / 30,
+                fontSize: 12,
                 fontWeight: FontWeight.w400,
               ),
             ),

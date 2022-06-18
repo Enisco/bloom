@@ -34,58 +34,59 @@ class _BloomHomepageState extends State<BloomHomepage> {
     //----------------------------------------------------------------------------------------
 
     return Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          selectedIconTheme: const IconThemeData(
-            color: Colors.black54,
-            size: 30,
-          ),
-          selectedItemColor: Colors.black54,
-          selectedLabelStyle: const TextStyle(
-              fontSize: 12, fontFamily: 'Poppins', fontWeight: FontWeight.w700),
-          showUnselectedLabels: true,
-          showSelectedLabels: true,
-          onTap: _onItemTapped,
-          currentIndex: _selectedIndex,
-          iconSize: size.width / 15,
-          selectedFontSize: size.width / 10,
-          unselectedFontSize: size.width / 30,
-          unselectedItemColor: Colors.black26,
-          unselectedLabelStyle:
-              TextStyle(fontSize: size.width / 30, color: Colors.black45),
-          //************************************************************************* */
-
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home_filled,
-              ),
-              label: 'Dashboard',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.question_answer_outlined,
-              ),
-              label: 'FAQs',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.people_alt,
-              ),
-              label: 'About',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.settings,
-              ),
-              label: 'Settings',
-            ),
-          ],
+      bottomNavigationBar: BottomNavigationBar(
+        selectedIconTheme: const IconThemeData(
+          color: Colors.black54,
+          size: 30,
         ),
-        //----------------------------------------------------------------------------------------
+        selectedItemColor: Colors.black54,
+        selectedLabelStyle: const TextStyle(
+            fontSize: 12, fontFamily: 'Poppins', fontWeight: FontWeight.w700),
+        showUnselectedLabels: true,
+        showSelectedLabels: true,
+        onTap: _onItemTapped,
+        currentIndex: _selectedIndex,
+        iconSize: size.width / 15,
+        selectedFontSize: size.width / 10,
+        unselectedFontSize: size.width / 30,
+        unselectedItemColor: Colors.black26,
+        unselectedLabelStyle:
+            TextStyle(fontSize: size.width / 30, color: Colors.black45),
+        //************************************************************************* */
 
-        body: IndexedStack(
-          index: _selectedIndex,
-          children: appPages,
-        ));
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_filled,
+            ),
+            label: 'Dashboard',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.question_answer_outlined,
+            ),
+            label: 'FAQs',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.people_alt,
+            ),
+            label: 'About',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.settings,
+            ),
+            label: 'Settings',
+          ),
+        ],
+      ),
+      //----------------------------------------------------------------------------------------
+
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: appPages,
+      ),
+    );
   }
 }

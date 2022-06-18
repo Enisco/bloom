@@ -39,7 +39,7 @@ class _EnergyConsumptionContainerState
 
     return Container(
       decoration: BoxDecoration(
-        color: const Color(0x1418A0FB),
+        color: const Color.fromRGBO(24, 160, 251, 0.08),
         borderRadius: BorderRadius.all(Radius.circular(size.width / 40)),
       ),
       width: size.width / 2.42,
@@ -56,33 +56,38 @@ class _EnergyConsumptionContainerState
               const Spacer0(),
               CircleAvatar(
                 radius: size.width / 20,
-                // backgroundColor: Colors.blue.withOpacity(0.2),
-                backgroundColor: const Color(0x1F18A0FB),
+                backgroundColor: const Color.fromRGBO(24, 160, 251, 0.12),
                 child: Icon(
                   CupertinoIcons.bolt,
                   color: const Color.fromRGBO(24, 160, 251, 1),
                   size: size.width / 12,
                 ),
               ),
-              const Spacer1(),
-              Text(
-                "Energy",
-                style: TextStyle(
-                  color: const Color.fromRGBO(24, 160, 251, 1),
-                  fontFamily: 'Poppins',
-                  fontSize: size.width / 23,
-                  fontWeight: FontWeight.w500,
+              const Spacer2(),
+              SizedBox(
+                width: size.width,
+                child: const Text(
+                  "Energy Consumption",
+                  style: TextStyle(
+                    color: Color.fromRGBO(24, 160, 251, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
-              Text(
-                "Consumption",
-                style: TextStyle(
-                  color: const Color.fromRGBO(24, 160, 251, 1),
-                  fontFamily: 'Poppins',
-                  fontSize: size.width / 23,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
+              // SizedBox(
+              //   width: size.width,
+              //   child: const Text(
+              //     "Consumption",
+              //     style: TextStyle(
+              //       color: Color.fromRGBO(24, 160, 251, 1),
+              //       fontFamily: 'Poppins',
+              //       fontSize: 14,
+              //       fontWeight: FontWeight.w500,
+              //     ),
+              //   ),
+              // ),
               const Spacer1(),
               RichText(
                 text: TextSpan(
@@ -145,9 +150,8 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      // padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
       decoration: BoxDecoration(
-        color: const Color(0x1400A7A7),
+        color: const Color.fromRGBO(0, 167, 167, 0.08),
         borderRadius: BorderRadius.all(Radius.circular(size.width / 40)),
       ),
       width: size.width / 2.42,
@@ -158,7 +162,6 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
             setState(() {
               meterState = !meterState;
             });
-            // goToPowerAnalysisPage();
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -167,33 +170,24 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
               const Spacer0(),
               CircleAvatar(
                 radius: size.width / 20,
-                // backgroundColor: Colors.blue.withOpacity(0.2),
-                backgroundColor: const Color(0x1F00A7A7),
+                backgroundColor: const Color.fromRGBO(0, 167, 167, 0.12),
                 child: Icon(
                   CupertinoIcons.antenna_radiowaves_left_right,
                   color: const Color.fromRGBO(0, 167, 167, 1),
                   size: size.width / 12,
                 ),
               ),
-              const Spacer1(),
-              Text(
-                "Meter Connection",
-                style: TextStyle(
-                  // color: const Color.fromRGBO(0, 167, 167, 1),
-                  color: const Color.fromRGBO(0, 167, 167, 1),
-
-                  fontFamily: 'Poppins',
-                  fontSize: size.width / 23,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              Text(
-                "State",
-                style: TextStyle(
-                  color: const Color.fromRGBO(0, 167, 167, 1),
-                  fontFamily: 'Poppins',
-                  fontSize: size.width / 23,
-                  fontWeight: FontWeight.w500,
+              const Spacer2(),
+              SizedBox(
+                width: size.width,
+                child: const Text(
+                  "Meter Connection State",
+                  style: TextStyle(
+                    color: Color.fromRGBO(0, 167, 167, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
               const Spacer2(),
@@ -204,7 +198,7 @@ class _MetersDetailsContainerState extends State<MetersDetailsContainer> {
                         ? CupertinoIcons.dot_radiowaves_right
                         : CupertinoIcons.wifi_slash,
                     color: meterState
-                        ? const Color.fromRGBO(173, 239, 209, 1)
+                        ? const Color.fromRGBO(0, 167, 167, 0.5)
                         : Colors.redAccent.withOpacity(0.5),
                   ),
                   Text(
