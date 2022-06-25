@@ -1,6 +1,6 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:bloom/components/my_spacers.dart';
+import 'package:bloom/components/utilities/my_spacers.dart';
 import 'package:bloom/pages/onboarding/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';

@@ -1,8 +1,8 @@
+import 'package:bloom/pages/mainpages/about_usC.dart';
 import 'package:flutter/material.dart';
 import 'faqs_page.dart';
-import 'about_us.dart';
 import 'dashboard.dart';
-import 'settings.dart';
+import 'account_page.dart';
 
 int _selectedIndex = 0;
 const List<Widget> appPages = <Widget>[
@@ -77,7 +77,7 @@ class _BloomHomepageState extends State<BloomHomepage> {
             icon: Icon(
               Icons.settings,
             ),
-            label: 'Settings',
+            label: 'My Account',
           ),
         ],
       ),

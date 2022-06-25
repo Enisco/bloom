@@ -1,11 +1,11 @@
 // ignore_for_file: avoid_print
 
+import 'package:bloom/components/utilities/buttons.dart';
+import 'package:bloom/components/utilities/my_spacers.dart';
+import 'package:bloom/components/utilities/top_progress_bars.dart';
 import 'package:bloom/pages/mainpages/bloom_homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:bloom/components/buttons.dart';
-import 'package:bloom/components/my_spacers.dart';
-import 'package:bloom/components/top_progress_bars.dart';
 import 'package:bloom/pages/onboarding/already_have_acc_check.dart';
 import 'signup_page1.dart';
 
@@ -28,8 +28,8 @@ class _SignInPageState extends State<SignInPage> {
       PageTransition(
           type: PageTransitionType.rightToLeft,
           curve: Curves.easeInToLinear,
-          duration: const Duration(milliseconds: 1000),
-          reverseDuration: const Duration(milliseconds: 1000),
+          duration: const Duration(milliseconds: 500),
+          reverseDuration: const Duration(milliseconds: 500),
           child: const BloomHomepage(),
           inheritTheme: true,
           ctx: context),
@@ -42,8 +42,8 @@ class _SignInPageState extends State<SignInPage> {
       PageTransition(
           type: PageTransitionType.rightToLeft,
           curve: Curves.fastLinearToSlowEaseIn,
-          duration: const Duration(milliseconds: 1000),
-          reverseDuration: const Duration(milliseconds: 1000),
+          duration: const Duration(milliseconds: 500),
+          reverseDuration: const Duration(milliseconds: 5000),
           child: const SignUpPageOne(),
           inheritTheme: true,
           ctx: context),
@@ -143,7 +143,7 @@ class _SignInPageState extends State<SignInPage> {
               ),
               const Spacer2(),
               //---------------------------------------------------------------------------------------------------------
-              
+
               AlreadyHaveAnAccountCheck(press: goToSignUpPage),
               const Spacer2(),
             ],

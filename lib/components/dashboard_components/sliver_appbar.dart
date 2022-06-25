@@ -1,10 +1,10 @@
+import 'package:bloom/components/utilities/profile_image_avatar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:bloom/components/profile_image_avatar.dart';
 import 'package:icon_badge/icon_badge.dart';
 
-String extendedAppBarTitle = "Welcome", userFirstName = "Iremide";
-String collapedAppBarTitle = 'Bloom';
+String userFirstName = "Iremide";
+const String collapedAppBarTitle = 'Bloom';
 int itemcount = 0;
 int tapcount = 0;
 var top = 0.0;
@@ -24,6 +24,10 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
 
     return SliverAppBar(
       centerTitle: true,
+      leadingWidth: size.width / 4,
+      collapsedHeight: size.height / 11.5,
+      expandedHeight: size.height / 7.5,
+      backgroundColor: Colors.white,
       pinned: true,
       leading: TextButton(
         child: const DashboardProfileImage(),
@@ -31,11 +35,6 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
           print("Hello");
         },
       ),
-      leadingWidth: size.width / 4,
-      collapsedHeight: size.height / 11.5,
-      expandedHeight: size.height / 7.5,
-      backgroundColor: Colors.white,
-      foregroundColor: Colors.black,
       //----------------------------------------------------------------------------
 
       actions: [
@@ -72,7 +71,7 @@ class _MySliverAppBarState extends State<MySliverAppBar> {
               child: Text(
                 top < appbarThreshold
                     ? collapedAppBarTitle
-                    : '$extendedAppBarTitle, $userFirstName',
+                    : 'Welcome, $userFirstName',
                 style: TextStyle(
                     fontSize: top < appbarThreshold ? 20 : 15,
                     color: const Color.fromRGBO(31, 31, 31, 1),

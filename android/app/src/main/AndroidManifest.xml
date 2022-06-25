@@ -2,8 +2,9 @@
     package="com.example.bloom">
    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="Bloom"
-        android:icon="@mipmap/launcher_icon">
+        android:label="Bloom Energy"
+        android:icon="@mipmap/launcher_icon"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

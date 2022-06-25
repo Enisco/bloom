@@ -9,19 +9,21 @@ List<String> nameText = [
   "Ambode Adetunji",
   "Bolutife Adegoke",
   "Grace Olasupo",
+  "Idris Qosim",
 ];
 
 List<String> roleText = [
   "Chief Investigator",
   "Software Lead",
+  "Hardware/3D Engineer",
   "Hardware Engineer/3D Designer",
-  "Hardware/Design Engineer",
   "Senior Software Engineer",
   "Data Engineer",
   "Hardware Intern/Data Analyst",
   "Hardware Intern",
   "UI/UX Designer",
   "Hardware Intern",
+  "Hardware Engineer/3D Designer",
 ];
 
 List<String> imageName = [
@@ -35,6 +37,7 @@ List<String> imageName = [
   "images/Ambode.png",
   "images/Bolutife.png",
   "images/Grace.png",
+  "images/Idris.png",
 ];
 
 List<String> detailsOfPersonText = [
@@ -137,4 +140,13 @@ List<String> detailsOfPersonText = [
       ' models for the development of cloud networks, traffic monitoring and management'
       ' and smart power grid.',
   //------------------------------------------------------------------------------
+
+  'Idris Qosim is a lecturer and researcher with over fifteen (15) years'
+      ' of experience in communication systems, computer communication and networking.'
+      ' Her research interest includes location-based information, crowdsourcing,'
+      ' mobile communication and sensor networks. Other research interest include '
+      'datamining techniques, gamification design and performance evaluation methods '
+      'and techniques. Other less prominent research interest includes optimization'
+      ' models for the development of cloud networks, traffic monitoring and management'
+      ' and smart power grid.',
 ];

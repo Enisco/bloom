@@ -1,9 +1,9 @@
 // @dart=2.9
 
+// /*
+import 'package:bloom/components/utilities/constants.dart';
 import 'package:bloom/pages/mainpages/bloom_homepage.dart';
 import 'package:flutter/material.dart';
-
-import 'components/constants.dart';
 
 void main() => runApp(const MyApp());
 
@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
       ),
       title: 'Bloom',
       home: const Scaffold(
-        // appBar: AppBar(title: const Text('Bloom')),
         // body: BloomSplashScreen(),
         // body: SignUpPageOne(),
         // body: SIgnUpTwo(),
@@ -34,3 +33,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+// */

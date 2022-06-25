@@ -4,7 +4,7 @@ import 'dart:math';
 import 'dart:async';
 
 import 'package:bloom/components/dashboard_components/power_usage_details_page.dart';
-import 'package:bloom/components/my_spacers.dart';
+import 'package:bloom/components/utilities/my_spacers.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 

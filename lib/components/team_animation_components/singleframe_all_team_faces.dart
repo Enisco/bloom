@@ -1,7 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:bloom/pages/mainpages/team_page.dart';
 import 'package:flutter/material.dart';
-import 'single_animated_tile_widget.dart';
+import 'each_animated_tile_widget.dart';
 import 'package:bloom/components/team_animation_components/team_details.dart';
 
 const ContainerTransitionType _transitionType = ContainerTransitionType.fade;
@@ -46,12 +46,12 @@ class _OpenContainerWrapperTeamFaces extends StatelessWidget {
     /**************************************************************************************** */
 
     return OpenContainer<bool>(
-      closedShape: RoundedRectangleBorder(
+      closedShape: const RoundedRectangleBorder(
         side: BorderSide(
-          color: Colors.amber.shade900,
-          width: 2.0,
+          color: Colors.grey,
+          width: 1.5,
         ),
-        borderRadius: const BorderRadius.only(
+        borderRadius: BorderRadius.only(
           topLeft: Radius.circular(10),
           bottomRight: Radius.circular(10),
         ),

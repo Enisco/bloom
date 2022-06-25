@@ -59,37 +59,52 @@ class SingleAnimatedTileWidget extends StatelessWidget {
   final String imageName;
   final String nameText;
   final String roleText;
-  
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.all(size.width / 200),
-      width: size.width / 2.5,
-      height: size.height / 3,
+      width: size.width / 2.4,
       child: InkWell(
         onTap: openContainer,
         child: Column(
           children: <Widget>[
             Center(
-              child: Image.asset(
-                imageName,
-                width: size.width / 2.5,
-                height: size.height / 3.8,
+              child: Container(
+                padding: const EdgeInsets.only(bottom: 10),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 16, 42, 54),
+                  border: Border.all(
+                      width: 1.0, color: const Color.fromARGB(255, 16, 42, 54)),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(15),
+                  ),
+                ),
+                child: Image.asset(
+                  imageName,
+                  width: size.width / 2.5,
+                  height: size.height / 4.5,
+                ),
               ),
             ),
-            SizedBox(height: size.width / 60),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  nameText,
-                  style: Theme.of(context).textTheme.subtitle2,
-                ),
-                SizedBox(height: size.width / 60),
-                Text(roleText, style: Theme.of(context).textTheme.caption),
-              ],
+            const SizedBox(height: 5),
+            Text(
+              nameText,
+              style: const TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+                color: Color.fromRGBO(57, 57, 57, 1),
+              ),
+            ),
+            const SizedBox(height: 3),
+            Text(
+              roleText,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleSmall!
+                  .copyWith(color: Colors.grey[700]),
+              textAlign: TextAlign.center,
             ),
           ],
         ),
@@ -117,8 +132,8 @@ class DrMrsAnimatedTileWidget extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.all(size.width / 80),
-      width: size.width - (size.width / 14),
-      height: size.height / 2.5,
+      width: size.width * 0.6,
+      height: size.height / 3.0,
       child: InkWell(
         onTap: openContainer,
         child: Column(
@@ -128,19 +143,43 @@ class DrMrsAnimatedTileWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Center(
-                  child: Image.asset(
-                    imageName,
-                    width: size.width - (size.width / 40),
-                    height: size.height / 3.0,
+                  child: Container(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 16, 42, 54),
+                      border: Border.all(
+                          width: 1.0,
+                          color: const Color.fromARGB(255, 16, 42, 54)),
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(15),
+                      ),
+                    ),
+                    child: Image.asset(
+                      imageName,
+                      width: size.width / 2.5,
+                      height: size.height / 4.5,
+                    ),
                   ),
                 ),
-                SizedBox(height: size.width / 60),
+                const SizedBox(height: 5),
                 Text(
                   nameText,
-                  style: Theme.of(context).textTheme.subtitle2,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                    color: Color.fromRGBO(57, 57, 57, 1),
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                SizedBox(height: size.width / 60),
-                Text(roleText, style: Theme.of(context).textTheme.caption),
+                const SizedBox(height: 3),
+                Text(
+                  roleText,
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleSmall!
+                      .copyWith(color: Colors.grey[700]),
+                  textAlign: TextAlign.center,
+                ),
               ],
             ),
           ],

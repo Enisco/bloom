@@ -14,14 +14,15 @@ class Faq extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
     return ExpandableNotifier(
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
           border: Border(
-            bottom: BorderSide(width: 2.0, color: Colors.grey.shade200),
+            bottom: BorderSide(
+              width: 2.0,
+              color: Color.fromRGBO(242, 242, 242, 1),
+            ),
           ),
         ),
         child: Padding(
@@ -31,8 +32,8 @@ class Faq extends StatelessWidget {
             scrollOnCollapse: true,
             child: ExpandablePanel(
               theme: const ExpandableThemeData(
-                iconColor: Colors.black54,
-                iconSize: 25.0,
+                iconColor: Color.fromRGBO(0, 0, 0, 1),
+                iconSize: 26.0,
                 headerAlignment: ExpandablePanelHeaderAlignment.center,
                 tapBodyToCollapse: true,
               ),
@@ -43,11 +44,11 @@ class Faq extends StatelessWidget {
                   ),
                   child: Text(
                     questionString,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontFamily: 'Poppins',
-                      fontSize: size.height / 45,
+                      fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      color: const Color.fromRGBO(57, 57, 57, 1),
+                      color: Color.fromRGBO(57, 57, 57, 1),
                     ),
                   )),
               collapsed: const Padding(
@@ -58,11 +59,11 @@ class Faq extends StatelessWidget {
               ),
               expanded: Text(
                 answerString,
-                style: TextStyle(
+                style: const TextStyle(
                   fontFamily: 'Poppins',
-                  fontSize: size.height / 45,
+                  fontSize: 13,
                   fontWeight: FontWeight.w400,
-                  color: const Color.fromRGBO(89, 89, 89, 1),
+                  color: Color.fromRGBO(89, 89, 89, 1),
                 ),
                 softWrap: true,
                 overflow: TextOverflow.fade,
@@ -89,8 +90,8 @@ class Faq extends StatelessWidget {
 }
 
 class FAQuestionsAndAnswers {
-  String questionText = '';
-  String questionAnswer = '';
+  final String questionText;
+  final String questionAnswer;
 
   FAQuestionsAndAnswers(
       {required this.questionText, required this.questionAnswer});

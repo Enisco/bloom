@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -9,42 +8,37 @@ class SettingsPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-              icon: const Icon(CupertinoIcons.chevron_back),
-              color: Colors.black87,
-              onPressed: () {
-                Navigator.pop(context);
-              }),
-          backgroundColor: Colors.white,
+          elevation: 1.0,
           shadowColor: Colors.black54,
+          centerTitle: true,
           title: const Text(
-            "Active Power Details",
+            "Settings",
             style: TextStyle(
-              color: Colors.black87,
               fontFamily: 'Poppins',
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
             ),
           ),
+          backgroundColor: Colors.amber[900],
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: const [
             Center(
               child: Text(
                 "Settings are unavailable for now.",
                 style: TextStyle(
                   fontFamily: 'Poppins',
-                  fontSize: size.width / 18,
+                  fontSize: 15,
                 ),
               ),
             ),
-            Center(
-              child: Text(
-                "Thank you!",
-                style: TextStyle(
-                  fontFamily: 'Poppins',
-                  fontSize: size.width / 18,
-                ),
+            Text(
+              "Thank you",
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 15,
               ),
             ),
           ],

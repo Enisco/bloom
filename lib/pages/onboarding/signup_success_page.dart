@@ -2,10 +2,10 @@
 
 import 'dart:async';
 
+import 'package:bloom/components/utilities/my_spacers.dart';
+import 'package:bloom/components/utilities/top_progress_bars.dart';
 import 'package:bloom/pages/onboarding/signin_page.dart';
 import 'package:flutter/material.dart';
-import 'package:bloom/components/my_spacers.dart';
-import 'package:bloom/components/top_progress_bars.dart';
 
 TextEditingController fullameController = TextEditingController();
 TextEditingController usernameController = TextEditingController();

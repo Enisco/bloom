@@ -1,5 +1,5 @@
 import 'package:bloom/components/dashboard_components/active_power_energy_chart.dart';
-import 'package:bloom/components/my_spacers.dart';
+import 'package:bloom/components/utilities/my_spacers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

@@ -1,12 +1,12 @@
 // ignore_for_file: avoid_print
 
+import 'package:bloom/components/utilities/buttons.dart';
+import 'package:bloom/components/utilities/top_progress_bars.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:bloom/components/my_spacers.dart';
-import 'package:bloom/components/buttons.dart';
-import 'package:bloom/components/top_progress_bars.dart';
 import 'package:bloom/pages/onboarding/already_have_acc_check.dart';
+import '../../components/utilities/my_spacers.dart';
 import 'signin_page.dart';
 import 'signup_page2.dart';
 

@@ -1,7 +1,7 @@
 import 'package:animations/animations.dart';
-import 'package:bloom/components/my_spacers.dart';
+import 'package:bloom/components/utilities/my_spacers.dart';
 import 'package:flutter/material.dart';
-import 'package:bloom/components/team_animation_components/single_animated_tile_widget.dart';
+import 'package:bloom/components/team_animation_components/each_animated_tile_widget.dart';
 import 'package:bloom/components/team_animation_components/team_details.dart';
 import 'package:bloom/components/team_animation_components/details_of_persons_page.dart';
 
@@ -50,15 +50,17 @@ class _OpenContainerWrapper extends StatelessWidget {
     /**************************************************************************************** */
 
     return OpenContainer<bool>(
+      closedElevation: 0.0,
+      openElevation: 0.0,
       closedShape: const RoundedRectangleBorder(
-        side: BorderSide(
-          color: Colors.amber,
-          width: 2.0,
-        ),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          bottomRight: Radius.circular(20),
-        ),
+        // side: BorderSide(
+        //   color: Colors.grey,
+        //   width: 1.5,
+        // ),
+        // borderRadius: BorderRadius.only(
+        //   topLeft: Radius.circular(20),
+        //   bottomRight: Radius.circular(20),
+        // ),
       ),
       /**************************************************************************************** */
       transitionType: transitionType,
@@ -104,87 +106,68 @@ class TeamDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          elevation: 0.0,
-          shadowColor: Colors.black54,
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(
-                  Icons.arrow_back_ios_new,
-                  color: Colors.black,
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-              );
-            },
-          ),
-          title: Container(
-            padding:
-                EdgeInsets.symmetric(vertical: 0.0, horizontal: size.width / 7),
-            width: size.width,
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 1.0,
+        shadowColor: Colors.black54,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
             color: Colors.white,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const Icon(
-                  Icons.people,
-                  color: Colors.black,
-                ),
-                SizedBox(
-                  width: size.width / 40,
-                ),
-                Text(
-                  "The Team",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: 'Roboto',
-                    fontSize: size.height / 30,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
+            size: 20,
           ),
-          backgroundColor: Colors.white,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
         ),
-        body: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(
-            parent: ClampingScrollPhysics(),
+        centerTitle: true,
+        title: const Text(
+          "The Team",
+          style: TextStyle(
+            fontFamily: 'Poppins',
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+            color: Colors.white,
           ),
-          child: Center(
-            child: Container(
-              height: size.height - (size.height / 150),
-              width: size.width - (size.width / 25),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.0),
-                border: Border.all(
-                  // color: Colors.grey.shade300,
-                  color: Colors.white,
-                ),
+        ),
+        backgroundColor: Colors.amber[900],
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(
+          vertical: 20,
+        ),
+        physics: const BouncingScrollPhysics(
+          parent: ClampingScrollPhysics(),
+        ),
+        child: Center(
+          child: Container(
+            height: size.height - (size.height / 150),
+            width: size.width - (size.width / 25),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0),
+              border: Border.all(
+                // color: Colors.grey.shade300,
+                color: Colors.white,
               ),
-              child: ListView(
-                padding: EdgeInsets.all(size.width / 35),
-                children: [
-                  const DrMrsDetailsFrame(),
-                  const Spacer1(),
-                  ListView(
-                    shrinkWrap: true,
-                    physics: const BouncingScrollPhysics(
-                      parent: ClampingScrollPhysics(),
-                    ),
-                    children: <Widget>[
-                      widgetsOfTeamDetails(nameText),
-                    ],
+            ),
+            child: ListView(
+              padding: EdgeInsets.all(size.width / 35),
+              children: [
+                const DrMrsDetailsFrame(),
+                const Spacer1(),
+                ListView(
+                  shrinkWrap: true,
+                  physics: const BouncingScrollPhysics(
+                    parent: ClampingScrollPhysics(),
                   ),
-                  const Spacer5(),
-                  const Spacer5(),
-                ],
-              ),
+                  children: <Widget>[
+                    widgetsOfTeamDetails(nameText),
+                  ],
+                ),
+                const Spacer5(),
+                const Spacer3(),
+              ],
             ),
           ),
         ),

@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:bloom/components/dashboard_components/dashboard_sliver_appbar.dart';
-import 'package:bloom/components/dashboard_components/dashboard_silverlist.dart';
+import 'package:bloom/components/dashboard_components/sliver_appbar.dart';
+import 'package:bloom/components/dashboard_components/silverlist_dashboard.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
