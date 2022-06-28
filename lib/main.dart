@@ -2,7 +2,7 @@
 
 // /*
 import 'package:bloom/components/utilities/constants.dart';
-import 'package:bloom/pages/mainpages/bloom_homepage.dart';
+import 'package:bloom/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       title: 'Bloom',
       home: const Scaffold(
-        // body: BloomSplashScreen(),
+        body: BloomSplashScreen(),
         // body: SignUpPageOne(),
         // body: SIgnUpTwo(),
         // body: SIgnUpSuccess(),
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         // body: FAQs_page(),
         // body: AboutUsPage(),
         // body: TeamDetailsPage(),
-        body: BloomHomepage(),
+        // body: BloomHomepage(),
         // body: Dashboard(),
       ),
     );
